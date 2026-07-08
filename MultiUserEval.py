@@ -1,0 +1,122 @@
+"""
+Multi-user evaluation harness.
+
+The original AmazonExp1.py / ML100KExp1.py `run()` only ever tested 2
+hardcoded synthetic users. Precision/Recall/F-measure were already computed
+inside main() but never aggregated over a real user sample or reported in
+the paper. This script samples real users from each dataset, runs the
+existing (unmodified) RL pipeline for each, and aggregates:
+  Precision, Recall, F-measure, Item Coverage, Return, Hit Ratio,
+  plus the fraction of users for whom no recommendation was feasible
+  (cold-start / disconnected-cluster cases, main() returns state=-1).
+"""
+import random
+import time
+import numpy as np
+import pandas as pd
+
+import Amazon_KMeansClustering as AKC
+import AmazonExp1 as AE
+import ML100K_KMeansClustering as MKC
+import ML100KExp1 as ME
+
+SEED = 42
+N_USERS = 40
+MAX_ITEMS_PER_USER = 50  # cap so a single very-active MovieLens user doesn't dominate runtime
+
+
+def sample_amazon_users(n=N_USERS, seed=SEED):
+    df = pd.read_csv('amazon test set.csv', header=None, names=['User No.', 'Product ID code', 'Rating'])
+    rng = random.Random(seed)
+    all_users = sorted(df['User No.'].unique().tolist())
+    chosen = rng.sample(all_users, min(n, len(all_users)))
+    samples = []
+    for u in chosen:
+        rows = df[df['User No.'] == u]
+        items = rows['Product ID code'].tolist()
+        ratings = rows['Rating'].tolist()
+        samples.append((u, items, ratings))
+    return samples
+
+
+def sample_movielens_users(n=N_USERS, seed=SEED, max_items=MAX_ITEMS_PER_USER):
+    df = pd.read_csv('Movielens100k.csv')
+    rng = random.Random(seed)
+    all_users = sorted(df['userId'].unique().tolist())
+    chosen = rng.sample(all_users, min(n, len(all_users)))
+    samples = []
+    for u in chosen:
+        rows = df[df['userId'] == u]
+        if len(rows) > max_items:
+            rows = rows.sample(n=max_items, random_state=seed)
+        items = rows['movieId'].tolist()
+        ratings = rows['rating'].tolist()
+        samples.append((u, items, ratings))
+    return samples
+
+
+def evaluate(dataset_name, main_fn, Dict, samples):
+    rows = []
+    infeasible = 0
+    for i, (uid, items, ratings) in enumerate(samples):
+        t0 = time.time()
+        try:
+            pred, cover, prec, recal, FM, ttime, ret, state, visited = main_fn(items, ratings, Dict)
+        except Exception as e:
+            print(f"[{dataset_name}] user {uid} raised {type(e).__name__}: {e} -- skipping")
+            continue
+        elapsed = time.time() - t0
+        if state == -1:
+            infeasible += 1
+            print(f"[{dataset_name}] user {uid} ({i+1}/{len(samples)}): infeasible (no reachable goal state)")
+            continue
+        hit = 1 if prec > 0 else 0
+        rows.append({'user': uid, 'n_items': len(items), 'coverage': cover,
+                     'precision': prec, 'recall': recal, 'f_measure': FM,
+                     'return': ret, 'hit': hit, 'seconds': elapsed})
+        print(f"[{dataset_name}] user {uid} ({i+1}/{len(samples)}): "
+              f"P={prec:.2f} R={recal:.2f} F={FM:.2f} cov={cover:.2f} hit={hit} ({elapsed:.1f}s)")
+
+    df = pd.DataFrame(rows)
+    df.to_csv(f'multiuser_eval_{dataset_name}.csv', index=False)
+
+    summary = {
+        'dataset': dataset_name,
+        'n_sampled': len(samples),
+        'n_evaluated': len(df),
+        'n_infeasible': infeasible,
+        'precision_mean': df['precision'].mean() if len(df) else float('nan'),
+        'precision_std': df['precision'].std() if len(df) else float('nan'),
+        'recall_mean': df['recall'].mean() if len(df) else float('nan'),
+        'recall_std': df['recall'].std() if len(df) else float('nan'),
+        'f_measure_mean': df['f_measure'].mean() if len(df) else float('nan'),
+        'coverage_mean': df['coverage'].mean() if len(df) else float('nan'),
+        'return_mean': df['return'].mean() if len(df) else float('nan'),
+        'hit_ratio': df['hit'].mean() if len(df) else float('nan'),
+    }
+    return df, summary
+
+
+if __name__ == '__main__':
+    all_summaries = []
+
+    print("=== Clustering Amazon (behavioral features) ===")
+    _, Dict_amazon = AKC.KMeans_Clusters('amazon test set.csv')
+    amazon_samples = sample_amazon_users()
+    print(f"Sampled {len(amazon_samples)} Amazon users "
+          f"(item counts: {[len(s[1]) for s in amazon_samples]})")
+    _, summary_a = evaluate('Amazon', AE.main, Dict_amazon, amazon_samples)
+    all_summaries.append(summary_a)
+
+    print("\n=== Clustering MovieLens (behavioral features) ===")
+    _, Dict_ml, _ = MKC.KMeans_Clusters('Movielens100k.csv')
+    ml_samples = sample_movielens_users()
+    print(f"Sampled {len(ml_samples)} MovieLens users "
+          f"(item counts: {[len(s[1]) for s in ml_samples]})")
+    _, summary_m = evaluate('MovieLens', ME.main, Dict_ml, ml_samples)
+    all_summaries.append(summary_m)
+
+    summary_df = pd.DataFrame(all_summaries)
+    summary_df.to_csv('multiuser_eval_summary.csv', index=False)
+    print("\n=== SUMMARY ===")
+    print(summary_df.to_string(index=False))

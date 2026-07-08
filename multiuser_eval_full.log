@@ -1,0 +1,2212 @@
+=== Clustering Amazon (behavioral features) ===
+Number of Products in Cluster 0: 33
+
+Number of Products in Cluster 1: 193
+
+Number of Products in Cluster 2: 14
+
+Number of Products in Cluster 3: 141
+
+Number of Products in Cluster 4: 6
+
+Number of Products in Cluster 5: 3
+
+Number of Products in Cluster 6: 62
+
+Number of Products in Cluster 7: 107
+
+Number of Products in Cluster 8: 16
+
+Number of Products in Cluster 9: 209
+
+Number of Products in Cluster 10: 14
+
+Number of Products in Cluster 11: 190
+
+Number of Products in Cluster 12: 1
+
+Number of Products in Cluster 13: 108
+
+Number of Products in Cluster 14: 3
+
+Number of Products in Cluster 15: 4
+
+Number of Products in Cluster 16: 82
+
+Number of Products in Cluster 17: 6
+
+Number of Products in Cluster 18: 1
+
+Number of Products in Cluster 19: 40
+
+Number of Products in Cluster 20: 26
+
+Number of Products in Cluster 21: 13
+
+Number of Products in Cluster 22: 7
+
+Number of Products in Cluster 23: 15
+
+Number of Products in Cluster 24: 11
+
+Number of Products in Cluster 25: 3
+
+Number of Products in Cluster 26: 10
+
+Number of Products in Cluster 27: 6
+
+Number of Products in Cluster 28: 1
+
+Number of Products in Cluster 29: 2
+
+Number of Products in Cluster 30: 1
+
+Number of Products in Cluster 31: 5
+
+Number of Products in Cluster 32: 6
+
+Number of Products in Cluster 33: 5
+
+Number of Products in Cluster 34: 3
+
+Number of Products in Cluster 35: 1
+
+Sampled 40 Amazon users (item counts: [1, 4, 1, 1, 1, 3, 1, 1, 1, 1, 1, 4, 1, 1, 1, 1, 4, 1, 1, 1, 1, 1, 1, 3, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 3])
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 99 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 81 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 65 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.34
+Average number of steps (last 100 episodes): 124.34
+Learning policy and Time taken to learn policy =  3.94
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 3, 2, 3, 9, 3, 2, 3, 8, 12, 18, 22, 18, 22, 29]
+unique states_visited =  {2, 3, 8, 9, 12, 18, 22, 29}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783495887.63
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 3, 2, 3, 9, 3, 2, 3, 8, 12, 18, 22, 18, 22, 29, 29]
+Apply policy unique states_visited =  {2, 3, 8, 9, 12, 18, 22, 29}  and size  =  8
+Time taken to apply policy =  3.94
+ intersectP =  {305}
+[Amazon] user 229 (1/40): P=0.16 R=100.00 F=0.31 cov=99.84 hit=1 (4.0s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 114 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.05
+Average number of steps (last 100 episodes): 128.05
+Learning policy and Time taken to learn policy =  4.14
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 4, 1, 5, 5, 5, 7, 4, 7, 4, 2, 3, 8, 3, 2]
+unique states_visited =  {1, 2, 3, 4, 5, 7, 8}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(3), np.int64(0), np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(1)]  Time taken to extract policy =  1783495891.58
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 4, 1, 5, 5, 5, 7, 4, 7, 4, 2, 3, 8, 3, 2, 3]
+Apply policy unique states_visited =  {1, 2, 3, 4, 5, 7, 8}  and size  =  7
+Time taken to apply policy =  4.14
+ intersectP =  {88, 193, 277, 62}
+[Amazon] user 52 (2/40): P=1.06 R=100.00 F=2.09 cov=98.94 hit=1 (4.1s)
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.25
+Average number of steps (last 100 episodes): 123.25
+Learning policy and Time taken to learn policy =  3.89
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 3, 9, 9, 11, 19, 21, 29, 30, 30, 34, 31, 28, 31, 27]
+unique states_visited =  {34, 3, 8, 9, 11, 19, 21, 27, 28, 29, 30, 31}  and size  =  12
+Applying Actions of Learned policy =  [np.int64(2), np.int64(1), np.int64(2), np.int64(3), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(1), np.int64(3), np.int64(0), np.int64(2), np.int64(3), np.int64(0), np.int64(2)]  Time taken to extract policy =  1783495895.72
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 3, 9, 9, 11, 19, 21, 29, 30, 30, 34, 31, 28, 31, 27, 23]
+Apply policy unique states_visited =  {34, 3, 8, 9, 11, 19, 21, 23, 27, 28, 29, 30, 31}  and size  =  13
+Time taken to apply policy =  3.89
+ intersectP =  {717}
+[Amazon] user 564 (3/40): P=0.23 R=100.00 F=0.46 cov=99.77 hit=1 (3.9s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 104 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 51 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 139 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 77 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.15
+Average number of steps (last 100 episodes): 125.15
+Learning policy and Time taken to learn policy =  3.98
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 26, 25, 25, 25, 26, 26, 32, 32, 32, 32, 27, 24, 26, 24]
+unique states_visited =  {32, 24, 25, 26, 27}  and size  =  5
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783495899.61
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 26, 25, 25, 25, 26, 26, 32, 32, 32, 32, 27, 24, 26, 24, 17]
+Apply policy unique states_visited =  {32, 17, 24, 25, 26, 27}  and size  =  6
+Time taken to apply policy =  3.98
+[Amazon] user 502 (4/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (4.0s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 136 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.11
+Average number of steps (last 100 episodes): 123.11
+Learning policy and Time taken to learn policy =  3.87
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 7, 4, 8, 12, 8, 12, 17, 12, 7, 12, 17, 13, 16, 14]
+unique states_visited =  {4, 7, 8, 12, 13, 14, 16, 17}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(2), np.int64(3), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(0), np.int64(3), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783495903.6
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 7, 4, 8, 12, 8, 12, 17, 12, 7, 12, 17, 13, 16, 14, 14]
+Apply policy unique states_visited =  {4, 7, 8, 12, 13, 14, 16, 17}  and size  =  8
+Time taken to apply policy =  3.87
+[Amazon] user 458 (5/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.9s)
+StartState in env.GridPos=  4
+StartState in Actual Grid=  7
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  7
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 101 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 127 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.87
+Average number of steps (last 100 episodes): 127.87
+Learning policy and Time taken to learn policy =  4.17
+StartState in Actual Grid=  7
+state in GridPos =  4  Q =  [0. 0. 0. 0.]
+states_visited =  [4, 1, 4, 8, 11, 18, 11, 9, 3, 9, 11, 8, 3, 8, 4]
+unique states_visited =  {1, 3, 4, 8, 9, 11, 18}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(0), np.int64(2), np.int64(3), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783495907.47
+StartState in Actual Grid=  7
+Apply policy states_visited =  [4, 1, 4, 8, 11, 18, 11, 9, 3, 9, 11, 8, 3, 8, 4, 7]
+Apply policy unique states_visited =  {1, 3, 4, 7, 8, 9, 11, 18}  and size  =  8
+Time taken to apply policy =  4.17
+ intersectP =  {425, 418, 383}
+[Amazon] user 286 (6/40): P=0.43 R=100.00 F=0.86 cov=99.57 hit=1 (4.2s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.48
+Average number of steps (last 100 episodes): 125.48
+Learning policy and Time taken to learn policy =  4.51
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 0, 0, 1, 0, 1, 1, 5, 5, 5, 6, 13, 7, 4, 7]
+unique states_visited =  {0, 1, 4, 5, 6, 7, 13}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(3), np.int64(0), np.int64(0), np.int64(3), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(1)]  Time taken to extract policy =  1783495911.65
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 0, 0, 1, 0, 1, 1, 5, 5, 5, 6, 13, 7, 4, 7, 12]
+Apply policy unique states_visited =  {0, 1, 4, 5, 6, 7, 12, 13}  and size  =  8
+Time taken to apply policy =  4.51
+ intersectP =  {281}
+[Amazon] user 210 (7/40): P=0.24 R=100.00 F=0.49 cov=99.76 hit=1 (4.5s)
+StartState in env.GridPos=  4
+StartState in Actual Grid=  7
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  7
+Episode: 0 Return: 0.0 Steps Taken: 143 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 106 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 103 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 126 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.81
+Average number of steps (last 100 episodes): 126.81
+Learning policy and Time taken to learn policy =  3.11
+StartState in Actual Grid=  7
+state in GridPos =  4  Q =  [0. 0. 0. 0.]
+states_visited =  [4, 8, 12, 17, 13, 6, 14, 6, 14, 6, 6, 13, 17, 24, 26]
+unique states_visited =  {4, 6, 8, 12, 13, 14, 17, 24, 26}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(2)]  Time taken to extract policy =  1783495916.16
+StartState in Actual Grid=  7
+Apply policy states_visited =  [4, 8, 12, 17, 13, 6, 14, 6, 14, 6, 6, 13, 17, 24, 26, 24]
+Apply policy unique states_visited =  {4, 6, 8, 12, 13, 14, 17, 24, 26}  and size  =  9
+Time taken to apply policy =  3.11
+ intersectP =  {1274}
+[Amazon] user 1117 (8/40): P=0.32 R=100.00 F=0.64 cov=99.68 hit=1 (3.1s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 126 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 50 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 119.32
+Average number of steps (last 100 episodes): 119.32
+Learning policy and Time taken to learn policy =  3.0
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 4, 1, 1, 5, 6, 13, 17, 13, 16, 25, 25, 15, 15, 25]
+unique states_visited =  {1, 4, 5, 6, 13, 15, 16, 17, 25}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(1), np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783495919.27
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 4, 1, 1, 5, 6, 13, 17, 13, 16, 25, 25, 15, 15, 25, 25]
+Apply policy unique states_visited =  {1, 4, 5, 6, 13, 15, 16, 17, 25}  and size  =  9
+Time taken to apply policy =  3.01
+ intersectP =  {233}
+[Amazon] user 179 (9/40): P=0.34 R=100.00 F=0.67 cov=99.66 hit=1 (3.0s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 134 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 112 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.08
+Average number of steps (last 100 episodes): 120.08
+Learning policy and Time taken to learn policy =  2.93
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 17, 13, 6, 5, 1, 4, 7, 12, 17, 23, 28, 23, 17, 23]
+unique states_visited =  {1, 4, 5, 6, 7, 12, 13, 17, 23, 28}  and size  =  10
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(0), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783495922.28
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 17, 13, 6, 5, 1, 4, 7, 12, 17, 23, 28, 23, 17, 23, 27]
+Apply policy unique states_visited =  {1, 4, 5, 6, 7, 12, 13, 17, 23, 27, 28}  and size  =  11
+Time taken to apply policy =  2.93
+[Amazon] user 865 (10/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (2.9s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 138 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.60
+Average number of steps (last 100 episodes): 127.60
+Learning policy and Time taken to learn policy =  3.15
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 7, 13, 16, 24, 16, 24, 16, 24, 16, 24, 17, 12, 17, 12]
+unique states_visited =  {7, 12, 13, 16, 17, 24}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(2), np.int64(3), np.int64(3), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783495925.21
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 7, 13, 16, 24, 16, 24, 16, 24, 16, 24, 17, 12, 17, 12, 8]
+Apply policy unique states_visited =  {7, 8, 12, 13, 16, 17, 24}  and size  =  7
+Time taken to apply policy =  3.15
+[Amazon] user 66 (11/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.2s)
+StartState in env.GridPos=  28
+StartState in Actual Grid=  27
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  27
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 117 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 124 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.47
+Average number of steps (last 100 episodes): 122.47
+Learning policy and Time taken to learn policy =  3.06
+StartState in Actual Grid=  27
+state in GridPos =  28  Q =  [0. 0. 0. 0.]
+states_visited =  [28, 30, 28, 23, 28, 23, 18, 11, 9, 9, 3, 8, 3, 2, 2]
+unique states_visited =  {2, 3, 8, 9, 11, 18, 23, 28, 30}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(0), np.int64(2), np.int64(0)]  Time taken to extract policy =  1783495928.36
+StartState in Actual Grid=  27
+Apply policy states_visited =  [28, 30, 28, 23, 28, 23, 18, 11, 9, 9, 3, 8, 3, 2, 2, 0]
+Apply policy unique states_visited =  {0, 2, 3, 8, 9, 11, 18, 23, 28, 30}  and size  =  10
+Time taken to apply policy =  3.06
+[Amazon] user 62 (12/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.1s)
+StartState in env.GridPos=  11
+StartState in Actual Grid=  19
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  19
+Episode: 0 Return: 0.0 Steps Taken: 69 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 137 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 95 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 46 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.76
+Average number of steps (last 100 episodes): 124.76
+Learning policy and Time taken to learn policy =  3.13
+StartState in Actual Grid=  19
+state in GridPos =  11  Q =  [0. 0. 0. 0.]
+states_visited =  [11, 18, 23, 17, 13, 6, 14, 15, 25, 16, 25, 15, 25, 26, 32]
+unique states_visited =  {32, 6, 11, 13, 14, 15, 16, 17, 18, 23, 25, 26}  and size  =  12
+Applying Actions of Learned policy =  [np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(2), np.int64(3), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(2)]  Time taken to extract policy =  1783495931.42
+StartState in Actual Grid=  19
+Apply policy states_visited =  [11, 18, 23, 17, 13, 6, 14, 15, 25, 16, 25, 15, 25, 26, 32, 27]
+Apply policy unique states_visited =  {32, 6, 11, 13, 14, 15, 16, 17, 18, 23, 25, 26, 27}  and size  =  13
+Time taken to apply policy =  3.13
+ intersectP =  {252}
+[Amazon] user 192 (13/40): P=0.31 R=100.00 F=0.62 cov=99.69 hit=1 (3.1s)
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 96 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.61
+Average number of steps (last 100 episodes): 125.61
+Learning policy and Time taken to learn policy =  3.07
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 11, 8, 12, 8, 12, 8, 3, 3, 3, 2, 0, 1, 1, 5]
+unique states_visited =  {0, 1, 2, 3, 5, 8, 11, 12}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(0), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(1)]  Time taken to extract policy =  1783495934.56
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 11, 8, 12, 8, 12, 8, 3, 3, 3, 2, 0, 1, 1, 5, 7]
+Apply policy unique states_visited =  {0, 1, 2, 3, 5, 7, 8, 11, 12}  and size  =  9
+Time taken to apply policy =  3.07
+[Amazon] user 448 (14/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.1s)
+StartState in env.GridPos=  6
+StartState in Actual Grid=  3
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  3
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 86 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 131 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 136 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.31
+Average number of steps (last 100 episodes): 122.31
+Learning policy and Time taken to learn policy =  2.97
+StartState in Actual Grid=  3
+state in GridPos =  6  Q =  [0. 0. 0. 0.]
+states_visited =  [6, 5, 6, 13, 7, 5, 1, 0, 1, 5, 5, 1, 4, 1, 1]
+unique states_visited =  {0, 1, 4, 5, 6, 7, 13}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(2), np.int64(3), np.int64(1), np.int64(2), np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(0), np.int64(2), np.int64(1), np.int64(0), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783495937.64
+StartState in Actual Grid=  3
+Apply policy states_visited =  [6, 5, 6, 13, 7, 5, 1, 0, 1, 5, 5, 1, 4, 1, 1, 5]
+Apply policy unique states_visited =  {0, 1, 4, 5, 6, 7, 13}  and size  =  7
+Time taken to apply policy =  2.97
+[Amazon] user 477 (15/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.0s)
+StartState in env.GridPos=  0
+StartState in Actual Grid=  0
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  0
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 129 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 89 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.56
+Average number of steps (last 100 episodes): 128.56
+Learning policy and Time taken to learn policy =  3.24
+StartState in Actual Grid=  0
+state in GridPos =  0  Q =  [0. 0. 0. 0.]
+states_visited =  [0, 2, 4, 7, 13, 7, 5, 7, 13, 17, 13, 7, 5, 6, 14]
+unique states_visited =  {0, 2, 4, 5, 6, 7, 13, 14, 17}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(3), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783495940.61
+StartState in Actual Grid=  0
+Apply policy states_visited =  [0, 2, 4, 7, 13, 7, 5, 7, 13, 17, 13, 7, 5, 6, 14, 14]
+Apply policy unique states_visited =  {0, 2, 4, 5, 6, 7, 13, 14, 17}  and size  =  9
+Time taken to apply policy =  3.24
+[Amazon] user 1035 (16/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.2s)
+StartState in env.GridPos=  5
+StartState in Actual Grid=  2
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  2
+Episode: 0 Return: 0.0 Steps Taken: 105 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 126 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.03
+Average number of steps (last 100 episodes): 122.03
+Learning policy and Time taken to learn policy =  2.94
+StartState in Actual Grid=  2
+state in GridPos =  5  Q =  [0. 0. 0. 0.]
+states_visited =  [5, 7, 4, 2, 2, 0, 2, 4, 2, 0, 2, 0, 1, 0, 0]
+unique states_visited =  {0, 1, 2, 4, 5, 7}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(3), np.int64(2), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783495943.85
+StartState in Actual Grid=  2
+Apply policy states_visited =  [5, 7, 4, 2, 2, 0, 2, 4, 2, 0, 2, 0, 1, 0, 0, 0]
+Apply policy unique states_visited =  {0, 1, 2, 4, 5, 7}  and size  =  6
+Time taken to apply policy =  2.94
+[Amazon] user 55 (17/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (2.9s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 72 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.08
+Average number of steps (last 100 episodes): 125.08
+Learning policy and Time taken to learn policy =  3.14
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 15, 15, 15, 15, 15, 15, 15, 15, 15, 25, 16, 14, 16, 25]
+unique states_visited =  {16, 25, 14, 15}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783495946.79
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 15, 15, 15, 15, 15, 15, 15, 15, 15, 25, 16, 14, 16, 25, 25]
+Apply policy unique states_visited =  {16, 25, 14, 15}  and size  =  4
+Time taken to apply policy =  3.14
+[Amazon] user 1150 (18/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.1s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 122 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.82
+Average number of steps (last 100 episodes): 126.82
+Learning policy and Time taken to learn policy =  3.14
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 5, 1, 5, 7, 4, 7, 12, 8, 12, 7, 5, 5, 7, 5]
+unique states_visited =  {1, 4, 5, 7, 8, 12}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(3), np.int64(2), np.int64(3), np.int64(1), np.int64(2), np.int64(3), np.int64(1), np.int64(2), np.int64(3), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1)]  Time taken to extract policy =  1783495949.94
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 5, 1, 5, 7, 4, 7, 12, 8, 12, 7, 5, 5, 7, 5, 7]
+Apply policy unique states_visited =  {1, 4, 5, 7, 8, 12}  and size  =  6
+Time taken to apply policy =  3.14
+ intersectP =  {564}
+[Amazon] user 408 (19/40): P=0.22 R=100.00 F=0.44 cov=99.78 hit=1 (3.1s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 95 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 85 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 139 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 137 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 117.92
+Average number of steps (last 100 episodes): 117.92
+Learning policy and Time taken to learn policy =  2.83
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 16, 24, 16, 14, 15, 15, 15, 25, 26, 24, 16, 25, 26, 32]
+unique states_visited =  {32, 13, 14, 15, 16, 24, 25, 26}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(1), np.int64(1), np.int64(2), np.int64(0), np.int64(3), np.int64(1), np.int64(1), np.int64(0)]  Time taken to extract policy =  1783495953.08
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 16, 24, 16, 14, 15, 15, 15, 25, 26, 24, 16, 25, 26, 32, 26]
+Apply policy unique states_visited =  {32, 13, 14, 15, 16, 24, 25, 26}  and size  =  8
+Time taken to apply policy =  2.83
+[Amazon] user 860 (20/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (2.8s)
+StartState in env.GridPos=  2
+StartState in Actual Grid=  6
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  6
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 50 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 140 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 141 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.88
+Average number of steps (last 100 episodes): 123.88
+Learning policy and Time taken to learn policy =  3.15
+StartState in Actual Grid=  6
+state in GridPos =  2  Q =  [0. 0. 0. 0.]
+states_visited =  [2, 0, 2, 3, 3, 3, 8, 12, 18, 12, 8, 4, 7, 4, 7]
+unique states_visited =  {0, 2, 3, 4, 7, 8, 12, 18}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783495955.91
+StartState in Actual Grid=  6
+Apply policy states_visited =  [2, 0, 2, 3, 3, 3, 8, 12, 18, 12, 8, 4, 7, 4, 7, 5]
+Apply policy unique states_visited =  {0, 2, 3, 4, 5, 7, 8, 12, 18}  and size  =  9
+Time taken to apply policy =  3.15
+ intersectP =  {604}
+[Amazon] user 452 (21/40): P=0.18 R=100.00 F=0.35 cov=99.82 hit=1 (3.1s)
+StartState in env.GridPos=  0
+StartState in Actual Grid=  0
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  0
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 90 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 139 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 100 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 110 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.90
+Average number of steps (last 100 episodes): 124.90
+Learning policy and Time taken to learn policy =  2.95
+StartState in Actual Grid=  0
+state in GridPos =  0  Q =  [0. 0. 0. 0.]
+states_visited =  [0, 0, 0, 0, 2, 2, 3, 2, 2, 3, 9, 3, 9, 9, 3]
+unique states_visited =  {0, 9, 2, 3}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(0), np.int64(2), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783495959.06
+StartState in Actual Grid=  0
+Apply policy states_visited =  [0, 0, 0, 0, 2, 2, 3, 2, 2, 3, 9, 3, 9, 9, 3, 8]
+Apply policy unique states_visited =  {0, 2, 3, 8, 9}  and size  =  5
+Time taken to apply policy =  2.95
+ intersectP =  {1077}
+[Amazon] user 920 (22/40): P=0.32 R=100.00 F=0.64 cov=99.68 hit=1 (3.0s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 85 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 92 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 62 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.28
+Average number of steps (last 100 episodes): 122.28
+Learning policy and Time taken to learn policy =  2.86
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 26, 24, 16, 24, 17, 12, 17, 23, 28, 30, 28, 22, 18, 22]
+unique states_visited =  {12, 16, 17, 18, 22, 23, 24, 25, 26, 28, 30}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(0)]  Time taken to extract policy =  1783495962.01
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 26, 24, 16, 24, 17, 12, 17, 23, 28, 30, 28, 22, 18, 22, 18]
+Apply policy unique states_visited =  {12, 16, 17, 18, 22, 23, 24, 25, 26, 28, 30}  and size  =  11
+Time taken to apply policy =  2.86
+[Amazon] user 570 (23/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (2.9s)
+StartState in env.GridPos=  17
+StartState in Actual Grid=  15
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  15
+Episode: 0 Return: 0.0 Steps Taken: 143 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 118 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.04
+Average number of steps (last 100 episodes): 127.04
+Learning policy and Time taken to learn policy =  3.1
+StartState in Actual Grid=  15
+state in GridPos =  17  Q =  [0. 0. 0. 0.]
+states_visited =  [17, 12, 8, 3, 9, 9, 11, 9, 9, 11, 9, 9, 9, 11, 19]
+unique states_visited =  {3, 8, 9, 11, 12, 17, 19}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(2), np.int64(1), np.int64(2), np.int64(3), np.int64(2), np.int64(2), np.int64(3), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783495964.87
+StartState in Actual Grid=  15
+Apply policy states_visited =  [17, 12, 8, 3, 9, 9, 11, 9, 9, 11, 9, 9, 9, 11, 19, 22]
+Apply policy unique states_visited =  {3, 8, 9, 11, 12, 17, 19, 22}  and size  =  8
+Time taken to apply policy =  3.1
+[Amazon] user 14 (24/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.1s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 106 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.72
+Average number of steps (last 100 episodes): 126.72
+Learning policy and Time taken to learn policy =  3.8
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 15, 15, 25, 25, 26, 25, 26, 32, 26, 32, 27, 31, 33, 32]
+unique states_visited =  {32, 33, 15, 25, 26, 27, 31}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(0), np.int64(0), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(3), np.int64(0), np.int64(1)]  Time taken to extract policy =  1783495967.98
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 15, 15, 25, 25, 26, 25, 26, 32, 26, 32, 27, 31, 33, 32, 33]
+Apply policy unique states_visited =  {32, 33, 15, 25, 26, 27, 31}  and size  =  7
+Time taken to apply policy =  3.8
+[Amazon] user 327 (25/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.8s)
+StartState in env.GridPos=  7
+StartState in Actual Grid=  8
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  8
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 139 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 110 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.44
+Average number of steps (last 100 episodes): 127.44
+Learning policy and Time taken to learn policy =  3.12
+StartState in Actual Grid=  8
+state in GridPos =  7  Q =  [0. 0. 0. 0.]
+states_visited =  [7, 4, 2, 0, 2, 2, 3, 9, 11, 8, 11, 9, 9, 10, 19]
+unique states_visited =  {0, 2, 3, 4, 7, 8, 9, 10, 11, 19}  and size  =  10
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783495971.79
+StartState in Actual Grid=  8
+Apply policy states_visited =  [7, 4, 2, 0, 2, 2, 3, 9, 11, 8, 11, 9, 9, 10, 19, 22]
+Apply policy unique states_visited =  {0, 2, 3, 4, 7, 8, 9, 10, 11, 19, 22}  and size  =  11
+Time taken to apply policy =  3.12
+[Amazon] user 866 (26/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.1s)
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 138 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.10
+Average number of steps (last 100 episodes): 123.10
+Learning policy and Time taken to learn policy =  2.93
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 3, 3, 9, 3, 2, 3, 2, 3, 8, 3, 9, 3, 3, 3]
+unique states_visited =  {8, 9, 2, 3}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(3), np.int64(2), np.int64(1), np.int64(0), np.int64(2), np.int64(2), np.int64(0)]  Time taken to extract policy =  1783495974.91
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 3, 3, 9, 3, 2, 3, 2, 3, 8, 3, 9, 3, 3, 3, 2]
+Apply policy unique states_visited =  {8, 9, 2, 3}  and size  =  4
+Time taken to apply policy =  2.93
+ intersectP =  {854}
+[Amazon] user 697 (27/40): P=0.36 R=100.00 F=0.71 cov=99.64 hit=1 (2.9s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 141 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.11
+Average number of steps (last 100 episodes): 128.11
+Learning policy and Time taken to learn policy =  2.97
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 5, 6, 13, 7, 12, 7, 4, 1, 4, 1, 1, 5, 7, 12]
+unique states_visited =  {1, 4, 5, 6, 7, 12, 13}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(3), np.int64(3), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(3), np.int64(1), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783495977.85
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 5, 6, 13, 7, 12, 7, 4, 1, 4, 1, 1, 5, 7, 12, 18]
+Apply policy unique states_visited =  {1, 4, 5, 6, 7, 12, 13, 18}  and size  =  8
+Time taken to apply policy =  2.97
+ intersectP =  {439}
+[Amazon] user 319 (28/40): P=0.17 R=100.00 F=0.34 cov=99.83 hit=1 (3.0s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 143 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 122 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 66 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 45 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.48
+Average number of steps (last 100 episodes): 123.48
+Learning policy and Time taken to learn policy =  3.24
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 10, 10, 20, 21, 19, 10, 20, 10, 20, 21, 19, 21, 20]
+unique states_visited =  {10, 19, 20, 21}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(0), np.int64(2), np.int64(1), np.int64(0), np.int64(1), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783495980.82
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 10, 10, 20, 21, 19, 10, 20, 10, 20, 21, 19, 21, 20, 20]
+Apply policy unique states_visited =  {10, 19, 20, 21}  and size  =  4
+Time taken to apply policy =  3.24
+[Amazon] user 441 (29/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.2s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 29 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 82 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.08
+Average number of steps (last 100 episodes): 125.08
+Learning policy and Time taken to learn policy =  4.47
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 25, 15, 25, 15, 14, 15, 14, 16, 24, 17, 24, 26, 26, 25]
+unique states_visited =  {14, 15, 16, 17, 24, 25, 26}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(3), np.int64(0), np.int64(1), np.int64(0), np.int64(2), np.int64(3), np.int64(2), np.int64(1), np.int64(1), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783495984.06
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 25, 15, 25, 15, 14, 15, 14, 16, 24, 17, 24, 26, 26, 25, 25]
+Apply policy unique states_visited =  {14, 15, 16, 17, 24, 25, 26}  and size  =  7
+Time taken to apply policy =  4.47
+[Amazon] user 690 (30/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (4.5s)
+StartState in env.GridPos=  29
+StartState in Actual Grid=  32
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  32
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 98 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 131 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 97 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.71
+Average number of steps (last 100 episodes): 125.71
+Learning policy and Time taken to learn policy =  3.84
+StartState in Actual Grid=  32
+state in GridPos =  29  Q =  [0. 0. 0. 0.]
+states_visited =  [29, 22, 19, 10, 19, 22, 29, 29, 29, 29, 30, 29, 29, 21, 21]
+unique states_visited =  {10, 19, 21, 22, 29, 30}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(0), np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(1), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783495988.53
+StartState in Actual Grid=  32
+Apply policy states_visited =  [29, 22, 19, 10, 19, 22, 29, 29, 29, 29, 30, 29, 29, 21, 21, 21]
+Apply policy unique states_visited =  {10, 19, 21, 22, 29, 30}  and size  =  6
+Time taken to apply policy =  3.84
+[Amazon] user 190 (31/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.8s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 122 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 121 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.56
+Average number of steps (last 100 episodes): 125.56
+Learning policy and Time taken to learn policy =  3.55
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 7, 4, 8, 11, 18, 22, 18, 12, 7, 13, 6, 14, 6, 13]
+unique states_visited =  {4, 6, 7, 8, 11, 12, 13, 14, 18, 22}  and size  =  10
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(1), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(2), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783495992.38
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 7, 4, 8, 11, 18, 22, 18, 12, 7, 13, 6, 14, 6, 13, 16]
+Apply policy unique states_visited =  {4, 6, 7, 8, 11, 12, 13, 14, 16, 18, 22}  and size  =  11
+Time taken to apply policy =  3.55
+ intersectP =  {936}
+[Amazon] user 779 (32/40): P=0.19 R=100.00 F=0.39 cov=99.81 hit=1 (3.6s)
+StartState in env.GridPos=  2
+StartState in Actual Grid=  6
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  6
+Episode: 0 Return: 0.0 Steps Taken: 129 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 110 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.50
+Average number of steps (last 100 episodes): 127.50
+Learning policy and Time taken to learn policy =  3.09
+StartState in Actual Grid=  6
+state in GridPos =  2  Q =  [0. 0. 0. 0.]
+states_visited =  [2, 4, 1, 4, 8, 4, 2, 4, 8, 3, 3, 9, 11, 18, 23]
+unique states_visited =  {1, 2, 3, 4, 8, 9, 11, 18, 23}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(3), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(3), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(3), np.int64(3), np.int64(2)]  Time taken to extract policy =  1783495995.93
+StartState in Actual Grid=  6
+Apply policy states_visited =  [2, 4, 1, 4, 8, 4, 2, 4, 8, 3, 3, 9, 11, 18, 23, 18]
+Apply policy unique states_visited =  {1, 2, 3, 4, 8, 9, 11, 18, 23}  and size  =  9
+Time taken to apply policy =  3.1
+ intersectP =  {265}
+[Amazon] user 199 (33/40): P=0.14 R=100.00 F=0.29 cov=99.86 hit=1 (3.1s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 135 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 132 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 119 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.42
+Average number of steps (last 100 episodes): 126.42
+Learning policy and Time taken to learn policy =  2.99
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 0, 0, 1, 5, 1, 5, 1, 1, 1, 0, 0, 0, 2, 2]
+unique states_visited =  {0, 1, 2, 5}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(3), np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(0), np.int64(0), np.int64(2), np.int64(0), np.int64(2), np.int64(1), np.int64(2), np.int64(1)]  Time taken to extract policy =  1783495999.03
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 0, 0, 1, 5, 1, 5, 1, 1, 1, 0, 0, 0, 2, 2, 3]
+Apply policy unique states_visited =  {0, 1, 2, 3, 5}  and size  =  5
+Time taken to apply policy =  2.99
+ intersectP =  {893}
+[Amazon] user 736 (34/40): P=0.34 R=100.00 F=0.68 cov=99.66 hit=1 (3.0s)
+StartState in env.GridPos=  32
+StartState in Actual Grid=  23
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  23
+Episode: 0 Return: 0.0 Steps Taken: 115 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 111 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 139 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 94 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.03
+Average number of steps (last 100 episodes): 126.03
+Learning policy and Time taken to learn policy =  3.2
+StartState in Actual Grid=  23
+state in GridPos =  32  Q =  [0. 0. 0. 0.]
+states_visited =  [32, 33, 35, 35, 35, 35, 35, 33, 33, 32, 32, 27, 24, 16, 14]
+unique states_visited =  {32, 33, 35, 14, 16, 24, 27}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(3), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(2), np.int64(0), np.int64(0), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783496002.02
+StartState in Actual Grid=  23
+Apply policy states_visited =  [32, 33, 35, 35, 35, 35, 35, 33, 33, 32, 32, 27, 24, 16, 14, 14]
+Apply policy unique states_visited =  {32, 33, 35, 14, 16, 24, 27}  and size  =  7
+Time taken to apply policy =  3.2
+[Amazon] user 705 (35/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.2s)
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 118 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 137 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 119 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 142 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.81
+Average number of steps (last 100 episodes): 120.81
+Learning policy and Time taken to learn policy =  2.96
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 4, 7, 4, 1, 0, 2, 4, 8, 4, 8, 3, 9, 11, 18]
+unique states_visited =  {0, 1, 2, 3, 4, 7, 8, 9, 11, 18}  and size  =  10
+Applying Actions of Learned policy =  [np.int64(0), np.int64(3), np.int64(2), np.int64(0), np.int64(2), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(3), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783496005.23
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 4, 7, 4, 1, 0, 2, 4, 8, 4, 8, 3, 9, 11, 18, 12]
+Apply policy unique states_visited =  {0, 1, 2, 3, 4, 7, 8, 9, 11, 12, 18}  and size  =  11
+Time taken to apply policy =  2.96
+ intersectP =  {695}
+[Amazon] user 542 (36/40): P=0.12 R=100.00 F=0.23 cov=99.88 hit=1 (3.0s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 109 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 35 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 115 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.39
+Average number of steps (last 100 episodes): 126.39
+Learning policy and Time taken to learn policy =  2.94
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 4, 8, 12, 8, 11, 9, 9, 11, 8, 11, 19, 21, 20, 20]
+unique states_visited =  {1, 4, 8, 9, 11, 12, 19, 20, 21}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(0)]  Time taken to extract policy =  1783496008.19
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 4, 8, 12, 8, 11, 9, 9, 11, 8, 11, 19, 21, 20, 20, 10]
+Apply policy unique states_visited =  {1, 4, 8, 9, 10, 11, 12, 19, 20, 21}  and size  =  10
+Time taken to apply policy =  2.94
+[Amazon] user 89 (37/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (2.9s)
+StartState in env.GridPos=  6
+StartState in Actual Grid=  3
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  3
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 53 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 130 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.12
+Average number of steps (last 100 episodes): 124.12
+Learning policy and Time taken to learn policy =  2.98
+StartState in Actual Grid=  3
+state in GridPos =  6  Q =  [0. 0. 0. 0.]
+states_visited =  [6, 13, 16, 24, 27, 32, 27, 23, 17, 23, 18, 11, 18, 11, 8]
+unique states_visited =  {32, 6, 8, 11, 13, 16, 17, 18, 23, 24, 27}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(1), np.int64(3), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(2), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783496011.13
+StartState in Actual Grid=  3
+Apply policy states_visited =  [6, 13, 16, 24, 27, 32, 27, 23, 17, 23, 18, 11, 18, 11, 8, 4]
+Apply policy unique states_visited =  {32, 4, 6, 8, 11, 13, 16, 17, 18, 23, 24, 27}  and size  =  12
+Time taken to apply policy =  2.99
+[Amazon] user 941 (38/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.0s)
+StartState in env.GridPos=  13
+StartState in Actual Grid=  9
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  9
+Episode: 0 Return: 0.0 Steps Taken: 117 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 123 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 108 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.64
+Average number of steps (last 100 episodes): 122.64
+Learning policy and Time taken to learn policy =  2.79
+StartState in Actual Grid=  9
+state in GridPos =  13  Q =  [0. 0. 0. 0.]
+states_visited =  [13, 6, 14, 16, 13, 17, 23, 18, 12, 18, 12, 18, 11, 8, 3]
+unique states_visited =  {3, 6, 8, 11, 12, 13, 14, 16, 17, 18, 23}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(0), np.int64(3), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(0), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783496014.12
+StartState in Actual Grid=  9
+Apply policy states_visited =  [13, 6, 14, 16, 13, 17, 23, 18, 12, 18, 12, 18, 11, 8, 3, 3]
+Apply policy unique states_visited =  {3, 6, 8, 11, 12, 13, 14, 16, 17, 18, 23}  and size  =  11
+Time taken to apply policy =  2.79
+ intersectP =  {1256}
+[Amazon] user 1099 (39/40): P=0.17 R=100.00 F=0.34 cov=99.83 hit=1 (2.8s)
+StartState in env.GridPos=  1
+StartState in Actual Grid=  1
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  1
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 122 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 121 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 104 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.44
+Average number of steps (last 100 episodes): 123.44
+Learning policy and Time taken to learn policy =  2.98
+StartState in Actual Grid=  1
+state in GridPos =  1  Q =  [0. 0. 0. 0.]
+states_visited =  [1, 5, 6, 6, 13, 7, 4, 8, 12, 7, 12, 8, 3, 9, 11]
+unique states_visited =  {1, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(3), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(1)]  Time taken to extract policy =  1783496016.92
+StartState in Actual Grid=  1
+Apply policy states_visited =  [1, 5, 6, 6, 13, 7, 4, 8, 12, 7, 12, 8, 3, 9, 11, 19]
+Apply policy unique states_visited =  {1, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 19}  and size  =  12
+Time taken to apply policy =  2.98
+[Amazon] user 256 (40/40): P=0.00 R=0.00 F=0.00 cov=100.00 hit=0 (3.0s)
+
+=== Clustering MovieLens (behavioral features) ===
+Number of Users in Cluster 0: 12
+
+Number of Users in Cluster 1: 35
+
+Number of Users in Cluster 2: 27
+
+Number of Users in Cluster 3: 8
+
+Number of Users in Cluster 4: 52
+
+Number of Users in Cluster 5: 19
+
+Number of Users in Cluster 6: 9
+
+Number of Users in Cluster 7: 19
+
+Number of Users in Cluster 8: 5
+
+Number of Users in Cluster 9: 9
+
+Number of Users in Cluster 10: 54
+
+Number of Users in Cluster 11: 8
+
+Number of Users in Cluster 12: 22
+
+Number of Users in Cluster 13: 10
+
+Number of Users in Cluster 14: 7
+
+Number of Users in Cluster 15: 27
+
+Number of Users in Cluster 16: 15
+
+Number of Users in Cluster 17: 28
+
+Number of Users in Cluster 18: 17
+
+Number of Users in Cluster 19: 15
+
+Number of Users in Cluster 20: 15
+
+Number of Users in Cluster 21: 16
+
+Number of Users in Cluster 22: 45
+
+Number of Users in Cluster 23: 18
+
+Number of Users in Cluster 24: 8
+
+Number of Users in Cluster 25: 5
+
+Number of Users in Cluster 26: 13
+
+Number of Users in Cluster 27: 13
+
+Number of Users in Cluster 28: 34
+
+Number of Users in Cluster 29: 16
+
+Number of Users in Cluster 30: 4
+
+Number of Users in Cluster 31: 12
+
+Number of Users in Cluster 32: 22
+
+Number of Users in Cluster 33: 4
+
+Number of Users in Cluster 34: 33
+
+Number of Users in Cluster 35: 15
+
+Sampled 40 MovieLens users (item counts: [50, 41, 50, 50, 50, 33, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 50, 31, 40, 50, 36, 50, 20, 50, 50, 50, 23, 50, 20, 50, 50, 50, 25, 21, 50, 43])
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 68 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.16
+Average number of steps (last 100 episodes): 125.16
+Learning policy and Time taken to learn policy =  3.84
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 11, 19, 11, 19, 21, 21, 19, 22, 18, 23, 17, 24, 27]
+unique states_visited =  {9, 10, 11, 17, 18, 19, 21, 22, 23, 24, 27}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(0), np.int64(3), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(1), np.int64(2)]  Time taken to extract policy =  1783496027.77
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 11, 19, 11, 19, 21, 21, 19, 22, 18, 23, 17, 24, 27, 23]
+Apply policy unique states_visited =  {9, 10, 11, 17, 18, 19, 21, 22, 23, 24, 27}  and size  =  11
+Time taken to apply policy =  3.84
+ intersectP =  {673, 102, 488, 138, 330, 314, 1199, 1623, 377, 1434, 1915, 60, 2525}
+[MovieLens] user 655 (1/40): P=0.53 R=26.00 F=1.04 cov=99.47 hit=1 (3.9s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 110 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.26
+Average number of steps (last 100 episodes): 126.26
+Learning policy and Time taken to learn policy =  3.76
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 19, 21, 21, 29, 21, 19, 21, 29, 30, 28, 23, 18, 12]
+unique states_visited =  {10, 12, 18, 19, 21, 23, 28, 29, 30}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(2), np.int64(3), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(2), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783496031.61
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 19, 21, 21, 29, 21, 19, 21, 29, 30, 28, 23, 18, 12, 7]
+Apply policy unique states_visited =  {7, 10, 12, 18, 19, 21, 23, 28, 29, 30}  and size  =  10
+Time taken to apply policy =  3.76
+ intersectP =  {320, 449, 453, 393, 398, 723, 702}
+[MovieLens] user 115 (2/40): P=0.24 R=17.07 F=0.47 cov=99.76 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 95 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 124 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 64 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.10
+Average number of steps (last 100 episodes): 128.10
+Learning policy and Time taken to learn policy =  3.91
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 20, 21, 20, 20, 21, 19, 11, 18, 11, 9, 3, 3, 8]
+unique states_visited =  {3, 8, 9, 10, 11, 18, 19, 20, 21}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(2), np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(3), np.int64(0), np.int64(0), np.int64(3), np.int64(2), np.int64(2), np.int64(0), np.int64(2), np.int64(3), np.int64(2)]  Time taken to extract policy =  1783496035.38
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 20, 21, 20, 20, 21, 19, 11, 18, 11, 9, 3, 3, 8, 3]
+Apply policy unique states_visited =  {3, 8, 9, 10, 11, 18, 19, 20, 21}  and size  =  9
+Time taken to apply policy =  3.92
+ intersectP =  {416, 1510, 1289, 847, 1042, 2495}
+[MovieLens] user 26 (3/40): P=0.22 R=12.00 F=0.43 cov=99.78 hit=1 (3.9s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.55
+Average number of steps (last 100 episodes): 124.55
+Learning policy and Time taken to learn policy =  3.69
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 11, 19, 21, 21, 29, 21, 19, 11, 18, 11, 18, 22, 29]
+unique states_visited =  {9, 10, 11, 18, 19, 21, 22, 29}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(0), np.int64(3), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(1), np.int64(1), np.int64(2)]  Time taken to extract policy =  1783496039.3
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 11, 19, 21, 21, 29, 21, 19, 11, 18, 11, 18, 22, 29, 21]
+Apply policy unique states_visited =  {9, 10, 11, 18, 19, 21, 22, 29}  and size  =  8
+Time taken to apply policy =  3.7
+ intersectP =  {355}
+[MovieLens] user 282 (4/40): P=0.07 R=2.00 F=0.13 cov=99.93 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 76 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 115 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 135 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.58
+Average number of steps (last 100 episodes): 128.58
+Learning policy and Time taken to learn policy =  3.85
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 10, 19, 21, 29, 30, 29, 22, 28, 30, 30, 30, 28, 31]
+unique states_visited =  {9, 10, 19, 21, 22, 28, 29, 30, 31}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(3), np.int64(2), np.int64(0), np.int64(3), np.int64(1), np.int64(1), np.int64(1), np.int64(0), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783496043.0
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 10, 19, 21, 29, 30, 29, 22, 28, 30, 30, 30, 28, 31, 27]
+Apply policy unique states_visited =  {9, 10, 19, 21, 22, 27, 28, 29, 30, 31}  and size  =  10
+Time taken to apply policy =  3.85
+ intersectP =  {129, 5699, 5700, 3305, 1196, 492, 494, 1680, 1555, 5213, 478, 1631}
+[MovieLens] user 251 (5/40): P=0.51 R=24.00 F=1.01 cov=99.49 hit=1 (3.9s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 100 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 74 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.14
+Average number of steps (last 100 episodes): 128.14
+Learning policy and Time taken to learn policy =  3.83
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 10, 10, 9, 3, 8, 11, 8, 4, 8, 11, 8, 4]
+unique states_visited =  {3, 4, 8, 9, 10, 11, 20}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(0), np.int64(2), np.int64(0), np.int64(0), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783496046.86
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 10, 10, 9, 3, 8, 11, 8, 4, 8, 11, 8, 4, 7]
+Apply policy unique states_visited =  {3, 4, 7, 8, 9, 10, 11, 20}  and size  =  8
+Time taken to apply policy =  3.83
+ intersectP =  {739, 390, 743, 521, 2764, 2799, 786, 627, 793}
+[MovieLens] user 229 (6/40): P=0.37 R=27.27 F=0.72 cov=99.63 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.42
+Average number of steps (last 100 episodes): 125.42
+Learning policy and Time taken to learn policy =  3.92
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 10, 10, 20, 20, 10, 20, 20, 10, 9, 9, 11, 9, 10]
+unique states_visited =  {9, 10, 11, 20}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(0), np.int64(0), np.int64(2), np.int64(3), np.int64(2), np.int64(1), np.int64(0)]  Time taken to extract policy =  1783496050.69
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 10, 10, 20, 20, 10, 20, 20, 10, 9, 9, 11, 9, 10, 9]
+Apply policy unique states_visited =  {9, 10, 11, 20}  and size  =  4
+Time taken to apply policy =  3.92
+ intersectP =  {1488, 2530, 739}
+[MovieLens] user 143 (7/40): P=0.37 R=6.00 F=0.69 cov=99.63 hit=1 (3.9s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 60 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 115 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.57
+Average number of steps (last 100 episodes): 126.57
+Learning policy and Time taken to learn policy =  3.7
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 19, 10, 19, 11, 9, 10, 19, 11, 19, 11, 18, 12, 17]
+unique states_visited =  {9, 10, 11, 12, 17, 18, 19}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(2), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(2), np.int64(1), np.int64(3), np.int64(0), np.int64(1), np.int64(0), np.int64(3), np.int64(0), np.int64(3), np.int64(2)]  Time taken to extract policy =  1783496054.62
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 19, 10, 19, 11, 9, 10, 19, 11, 19, 11, 18, 12, 17, 12]
+Apply policy unique states_visited =  {9, 10, 11, 12, 17, 18, 19}  and size  =  7
+Time taken to apply policy =  3.7
+ intersectP =  {707, 1479, 330, 4493, 654, 47, 77, 945, 658, 4499, 337, 370, 4474, 184, 986, 3356, 765}
+[MovieLens] user 105 (8/40): P=0.72 R=34.00 F=1.41 cov=99.28 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 116 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 131.32
+Average number of steps (last 100 episodes): 131.32
+Learning policy and Time taken to learn policy =  4.52
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 10, 20, 21, 21, 19, 21, 29, 29, 30, 29, 22, 28]
+unique states_visited =  {10, 19, 20, 21, 22, 28, 29, 30}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496058.33
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 10, 20, 21, 21, 19, 21, 29, 29, 30, 29, 22, 28, 31]
+Apply policy unique states_visited =  {10, 19, 20, 21, 22, 28, 29, 30, 31}  and size  =  9
+Time taken to apply policy =  4.52
+ intersectP =  {581, 4585, 75, 812, 235, 2192, 17, 2067, 340, 726, 824}
+[MovieLens] user 559 (9/40): P=0.48 R=22.00 F=0.94 cov=99.52 hit=1 (4.5s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 124 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 112 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 140 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 121.02
+Average number of steps (last 100 episodes): 121.02
+Learning policy and Time taken to learn policy =  3.56
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 21, 20, 20, 10, 20, 20, 20, 20, 20, 20, 21, 19, 22]
+unique states_visited =  {10, 19, 20, 21, 22}  and size  =  5
+Applying Actions of Learned policy =  [np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(2), np.int64(3), np.int64(0), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783496062.86
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 21, 20, 20, 10, 20, 20, 20, 20, 20, 20, 21, 19, 22, 18]
+Apply policy unique states_visited =  {10, 18, 19, 20, 21, 22}  and size  =  6
+Time taken to apply policy =  3.57
+ intersectP =  {764, 807, 747, 812, 659, 726, 2294, 2295, 828, 4253}
+[MovieLens] user 90 (10/40): P=0.69 R=20.00 F=1.34 cov=99.31 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 103 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 111 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 130 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.16
+Average number of steps (last 100 episodes): 126.16
+Learning policy and Time taken to learn policy =  3.45
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 10, 10, 20, 21, 20, 20, 20, 21, 21, 19, 11, 8, 12]
+unique states_visited =  {8, 10, 11, 12, 19, 20, 21}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496066.43
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 10, 10, 20, 21, 20, 20, 20, 21, 21, 19, 11, 8, 12, 17]
+Apply policy unique states_visited =  {8, 10, 11, 12, 17, 19, 20, 21}  and size  =  8
+Time taken to apply policy =  3.45
+ intersectP =  {509, 764, 5254, 201, 12, 332, 589, 4239, 4590, 2514, 3606, 923, 828, 2747, 254, 2623}
+[MovieLens] user 605 (11/40): P=0.48 R=32.00 F=0.96 cov=99.52 hit=1 (3.5s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 140 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 130.25
+Average number of steps (last 100 episodes): 130.25
+Learning policy and Time taken to learn policy =  3.79
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 10, 20, 21, 21, 20, 21, 20, 21, 19, 10, 20, 20, 20]
+unique states_visited =  {10, 19, 20, 21}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(1), np.int64(2), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783496069.89
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 10, 20, 21, 21, 20, 21, 20, 21, 19, 10, 20, 20, 20, 21]
+Apply policy unique states_visited =  {10, 19, 20, 21}  and size  =  4
+Time taken to apply policy =  3.79
+ intersectP =  {1230, 2175}
+[MovieLens] user 433 (12/40): P=0.20 R=4.00 F=0.38 cov=99.80 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 131 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 134 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.94
+Average number of steps (last 100 episodes): 127.94
+Learning policy and Time taken to learn policy =  3.77
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 10, 9, 3, 3, 9, 10, 9, 9, 10, 20, 20, 21, 29]
+unique states_visited =  {3, 9, 10, 20, 21, 29}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(2)]  Time taken to extract policy =  1783496073.68
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 10, 9, 3, 3, 9, 10, 9, 9, 10, 20, 20, 21, 29, 21]
+Apply policy unique states_visited =  {3, 9, 10, 20, 21, 29}  and size  =  6
+Time taken to apply policy =  3.78
+ intersectP =  {233, 2954, 645}
+[MovieLens] user 33 (13/40): P=0.20 R=6.00 F=0.39 cov=99.80 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 119 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 102 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 136 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 125.51
+Average number of steps (last 100 episodes): 125.51
+Learning policy and Time taken to learn policy =  3.69
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 20, 20, 10, 10, 20, 21, 29, 29, 30, 28, 23, 18, 11]
+unique states_visited =  {10, 11, 18, 20, 21, 23, 28, 29, 30}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(1), np.int64(3), np.int64(3), np.int64(1), np.int64(3), np.int64(0), np.int64(0), np.int64(2), np.int64(2), np.int64(1)]  Time taken to extract policy =  1783496077.46
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 20, 20, 10, 10, 20, 21, 29, 29, 30, 28, 23, 18, 11, 19]
+Apply policy unique states_visited =  {10, 11, 18, 19, 20, 21, 23, 28, 29, 30}  and size  =  10
+Time taken to apply policy =  3.69
+ intersectP =  {64, 1632, 266, 2124, 366, 2194, 370, 184, 1081, 2683}
+[MovieLens] user 31 (14/40): P=0.42 R=20.00 F=0.82 cov=99.58 hit=1 (3.7s)
+StartState in env.GridPos=  5
+StartState in Actual Grid=  2
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  2
+Episode: 0 Return: 0.0 Steps Taken: 87 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 139 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 93 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.09
+Average number of steps (last 100 episodes): 126.09
+Learning policy and Time taken to learn policy =  3.63
+StartState in Actual Grid=  2
+state in GridPos =  5  Q =  [0. 0. 0. 0.]
+states_visited =  [5, 6, 13, 16, 24, 26, 32, 27, 24, 27, 24, 27, 32, 27, 23]
+unique states_visited =  {32, 5, 6, 13, 16, 23, 24, 26, 27}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(3), np.int64(2), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783496081.16
+StartState in Actual Grid=  2
+Apply policy states_visited =  [5, 6, 13, 16, 24, 26, 32, 27, 24, 27, 24, 27, 32, 27, 23, 18]
+Apply policy unique states_visited =  {32, 5, 6, 13, 16, 18, 23, 24, 26, 27}  and size  =  10
+Time taken to apply policy =  3.63
+ intersectP =  {4353, 4354, 4355, 1541, 4358, 1035, 783, 405, 794, 1952, 160, 80, 475, 737, 2020, 108, 506, 122, 892, 4349}
+[MovieLens] user 96 (15/40): P=1.53 R=40.00 F=2.95 cov=98.47 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 134 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 130 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 106 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.31
+Average number of steps (last 100 episodes): 127.31
+Learning policy and Time taken to learn policy =  3.82
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 20, 20, 10, 20, 10, 19, 22, 28, 23, 27, 32, 33, 31]
+unique states_visited =  {32, 33, 10, 19, 20, 22, 23, 27, 28, 31}  and size  =  10
+Applying Actions of Learned policy =  [np.int64(2), np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(3), np.int64(3), np.int64(3), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(2), np.int64(1)]  Time taken to extract policy =  1783496084.8
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 20, 20, 10, 20, 10, 19, 22, 28, 23, 27, 32, 33, 31, 34]
+Apply policy unique states_visited =  {32, 33, 34, 10, 19, 20, 22, 23, 27, 28, 31}  and size  =  11
+Time taken to apply policy =  3.83
+ intersectP =  {419, 421, 5512, 5264, 150, 2072}
+[MovieLens] user 224 (16/40): P=0.27 R=12.00 F=0.54 cov=99.73 hit=1 (3.8s)
+StartState in env.GridPos=  4
+StartState in Actual Grid=  7
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  7
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 112 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 126 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.29
+Average number of steps (last 100 episodes): 120.29
+Learning policy and Time taken to learn policy =  3.56
+StartState in Actual Grid=  7
+state in GridPos =  4  Q =  [0. 0. 0. 0.]
+states_visited =  [4, 1, 4, 2, 4, 2, 3, 2, 3, 3, 3, 2, 3, 8, 12]
+unique states_visited =  {1, 2, 3, 4, 8, 12}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(2), np.int64(3), np.int64(2), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496088.64
+StartState in Actual Grid=  7
+Apply policy states_visited =  [4, 1, 4, 2, 4, 2, 3, 2, 3, 3, 3, 2, 3, 8, 12, 17]
+Apply policy unique states_visited =  {1, 2, 3, 4, 8, 12, 17}  and size  =  7
+Time taken to apply policy =  3.56
+ intersectP =  {4608, 5634, 2562, 5635, 2078, 164, 4520, 2602, 4659, 3124, 2557, 3402, 3661, 589, 84, 604, 1121, 1008, 4592, 5619, 5620, 5629}
+[MovieLens] user 239 (17/40): P=0.78 R=44.00 F=1.53 cov=99.22 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 131 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 127 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.02
+Average number of steps (last 100 episodes): 127.02
+Learning policy and Time taken to learn policy =  3.72
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 21, 19, 21, 29, 30, 28, 23, 18, 12, 18, 22, 28, 23]
+unique states_visited =  {10, 12, 18, 19, 20, 21, 22, 23, 28, 29, 30}  and size  =  11
+Applying Actions of Learned policy =  [np.int64(1), np.int64(3), np.int64(0), np.int64(1), np.int64(3), np.int64(3), np.int64(0), np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(3), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783496092.21
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 21, 19, 21, 29, 30, 28, 23, 18, 12, 18, 22, 28, 23, 27]
+Apply policy unique states_visited =  {10, 12, 18, 19, 20, 21, 22, 23, 27, 28, 29, 30}  and size  =  12
+Time taken to apply policy =  3.73
+ intersectP =  {512, 3108, 2155, 398, 7183, 4655, 337, 434, 3636, 3605, 5622, 7706, 2683, 796, 6302}
+[MovieLens] user 518 (18/40): P=0.60 R=30.00 F=1.18 cov=99.40 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 128.59
+Average number of steps (last 100 episodes): 128.59
+Learning policy and Time taken to learn policy =  3.76
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 10, 9, 11, 19, 10, 9, 9, 9, 10, 10, 19, 21, 29]
+unique states_visited =  {9, 10, 11, 19, 21, 29}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(0), np.int64(3), np.int64(1), np.int64(2), np.int64(0), np.int64(2), np.int64(2), np.int64(1), np.int64(2), np.int64(3), np.int64(1), np.int64(3), np.int64(0)]  Time taken to extract policy =  1783496095.94
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 10, 9, 11, 19, 10, 9, 9, 9, 10, 10, 19, 21, 29, 22]
+Apply policy unique states_visited =  {9, 10, 11, 19, 21, 22, 29}  and size  =  7
+Time taken to apply policy =  3.77
+ intersectP =  {337, 12, 340, 807}
+[MovieLens] user 617 (19/40): P=0.26 R=8.00 F=0.51 cov=99.74 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 98 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 117 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 110 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.62
+Average number of steps (last 100 episodes): 123.62
+Learning policy and Time taken to learn policy =  3.48
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 9, 3, 9, 10, 19, 10, 19, 11, 19, 11, 8, 3, 9]
+unique states_visited =  {3, 8, 9, 10, 11, 19}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(2), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783496099.72
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 9, 3, 9, 10, 19, 10, 19, 11, 19, 11, 8, 3, 9, 11]
+Apply policy unique states_visited =  {3, 8, 9, 10, 11, 19}  and size  =  6
+Time taken to apply policy =  3.48
+ intersectP =  {739, 390, 743, 2505, 2506, 2507, 464, 789, 254}
+[MovieLens] user 28 (20/40): P=0.47 R=18.00 F=0.92 cov=99.53 hit=1 (3.5s)
+StartState in env.GridPos=  3
+StartState in Actual Grid=  12
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  12
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 132 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.77
+Average number of steps (last 100 episodes): 122.77
+Learning policy and Time taken to learn policy =  3.6
+StartState in Actual Grid=  12
+state in GridPos =  3  Q =  [0. 0. 0. 0.]
+states_visited =  [3, 8, 11, 18, 11, 8, 11, 8, 3, 2, 0, 0, 0, 0, 0]
+unique states_visited =  {0, 2, 3, 8, 11, 18}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(3), np.int64(1), np.int64(3), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(0), np.int64(2), np.int64(0), np.int64(2), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783496103.21
+StartState in Actual Grid=  12
+Apply policy states_visited =  [3, 8, 11, 18, 11, 8, 11, 8, 3, 2, 0, 0, 0, 0, 0, 0]
+Apply policy unique states_visited =  {0, 2, 3, 8, 11, 18}  and size  =  6
+Time taken to apply policy =  3.6
+ intersectP =  {738, 1027, 1033, 1195, 8460, 2867, 3004, 4637, 735}
+[MovieLens] user 575 (21/40): P=0.51 R=18.00 F=0.98 cov=99.49 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 141 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 121.57
+Average number of steps (last 100 episodes): 121.57
+Learning policy and Time taken to learn policy =  4.21
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 19, 22, 19, 22, 28, 31, 34, 30, 30, 34, 34, 35, 33]
+unique states_visited =  {33, 34, 35, 10, 19, 22, 28, 30, 31}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(2), np.int64(3), np.int64(3), np.int64(2), np.int64(3), np.int64(3), np.int64(3), np.int64(1), np.int64(2), np.int64(1), np.int64(3), np.int64(1), np.int64(3), np.int64(0), np.int64(3)]  Time taken to extract policy =  1783496106.82
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 19, 22, 19, 22, 28, 31, 34, 30, 30, 34, 34, 35, 33, 33]
+Apply policy unique states_visited =  {33, 34, 35, 10, 19, 22, 28, 30, 31}  and size  =  9
+Time taken to apply policy =  4.22
+ intersectP =  {355, 421, 807, 552, 2416, 2174, 191}
+[MovieLens] user 204 (22/40): P=0.31 R=22.58 F=0.62 cov=99.69 hit=1 (4.2s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 128 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 140 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 126 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.08
+Average number of steps (last 100 episodes): 123.08
+Learning policy and Time taken to learn policy =  3.52
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 10, 10, 9, 11, 19, 11, 8, 11, 18, 11, 18, 22]
+unique states_visited =  {8, 9, 10, 11, 18, 19, 20, 22}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(0), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(3), np.int64(2), np.int64(3), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783496111.04
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 10, 10, 9, 11, 19, 11, 8, 11, 18, 11, 18, 22, 28]
+Apply policy unique states_visited =  {8, 9, 10, 11, 18, 19, 20, 22, 28}  and size  =  9
+Time taken to apply policy =  3.53
+ intersectP =  {657, 2530, 86}
+[MovieLens] user 666 (23/40): P=0.12 R=7.50 F=0.24 cov=99.88 hit=1 (3.5s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 108 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 77 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 92 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 121.22
+Average number of steps (last 100 episodes): 121.22
+Learning policy and Time taken to learn policy =  3.54
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 20, 20, 10, 9, 11, 19, 11, 9, 9, 3, 2, 4]
+unique states_visited =  {2, 3, 4, 9, 10, 11, 19, 20}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(0), np.int64(0), np.int64(3), np.int64(1), np.int64(0), np.int64(2), np.int64(2), np.int64(0), np.int64(0), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496114.58
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 20, 20, 10, 9, 11, 19, 11, 9, 9, 3, 2, 4, 7]
+Apply policy unique states_visited =  {2, 3, 4, 7, 9, 10, 11, 19, 20}  and size  =  9
+Time taken to apply policy =  3.54
+ intersectP =  {6976, 1226, 2669, 20, 189, 2175}
+[MovieLens] user 430 (24/40): P=0.34 R=12.00 F=0.66 cov=99.66 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 67 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 53 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.86
+Average number of steps (last 100 episodes): 120.86
+Learning policy and Time taken to learn policy =  3.35
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 19, 21, 20, 20, 20, 20, 10, 19, 10, 20, 10, 19, 11, 8]
+unique states_visited =  {8, 10, 11, 19, 20, 21}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(3), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(1), np.int64(0), np.int64(3), np.int64(0), np.int64(0), np.int64(2)]  Time taken to extract policy =  1783496118.12
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 19, 21, 20, 20, 20, 20, 10, 19, 10, 20, 10, 19, 11, 8, 3]
+Apply policy unique states_visited =  {3, 8, 10, 11, 19, 20, 21}  and size  =  7
+Time taken to apply policy =  3.35
+ intersectP =  {1314, 4198, 1510, 906, 494, 1231, 5519, 623, 2970, 5211}
+[MovieLens] user 226 (25/40): P=0.44 R=27.78 F=0.86 cov=99.56 hit=1 (3.4s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 123 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 63 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 124 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 121.83
+Average number of steps (last 100 episodes): 121.83
+Learning policy and Time taken to learn policy =  3.55
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 20, 20, 20, 20, 21, 29, 22, 28, 22, 19, 21, 19]
+unique states_visited =  {10, 19, 20, 21, 22, 28, 29}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(3), np.int64(3), np.int64(0), np.int64(3), np.int64(2), np.int64(2), np.int64(1), np.int64(0), np.int64(0)]  Time taken to extract policy =  1783496121.48
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 20, 20, 20, 20, 21, 29, 22, 28, 22, 19, 21, 19, 11]
+Apply policy unique states_visited =  {10, 11, 19, 20, 21, 22, 28, 29}  and size  =  8
+Time taken to apply policy =  3.55
+ intersectP =  {1034, 437, 438, 406, 3420, 509}
+[MovieLens] user 460 (26/40): P=0.41 R=12.00 F=0.80 cov=99.59 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 65 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 133 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 122.16
+Average number of steps (last 100 episodes): 122.16
+Learning policy and Time taken to learn policy =  3.58
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 3, 2, 3, 8, 4, 1, 5, 6, 5, 6, 5, 5, 6]
+unique states_visited =  {1, 2, 3, 4, 5, 6, 8, 9, 10}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(3), np.int64(0), np.int64(0), np.int64(3), np.int64(3), np.int64(2), np.int64(3), np.int64(2), np.int64(0), np.int64(3), np.int64(1)]  Time taken to extract policy =  1783496125.03
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 3, 2, 3, 8, 4, 1, 5, 6, 5, 6, 5, 5, 6, 13]
+Apply policy unique states_visited =  {1, 2, 3, 4, 5, 6, 8, 9, 10, 13}  and size  =  10
+Time taken to apply policy =  3.59
+ intersectP =  {1184, 517, 263, 524, 657, 3121, 5715, 20, 2261, 1009, 1055}
+[MovieLens] user 604 (27/40): P=0.52 R=55.00 F=1.03 cov=99.48 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 114 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 138 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.42
+Average number of steps (last 100 episodes): 120.42
+Learning policy and Time taken to learn policy =  3.5
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 10, 10, 10, 19, 11, 18, 12, 18, 12, 18, 22, 18, 11]
+unique states_visited =  {9, 10, 11, 12, 18, 19, 22}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(3), np.int64(0), np.int64(3), np.int64(0), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(2)]  Time taken to extract policy =  1783496128.62
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 10, 10, 10, 19, 11, 18, 12, 18, 12, 18, 22, 18, 11, 9]
+Apply policy unique states_visited =  {9, 10, 11, 12, 18, 19, 22}  and size  =  7
+Time taken to apply policy =  3.5
+ intersectP =  {64, 4647, 5526, 440, 189, 702}
+[MovieLens] user 285 (28/40): P=0.37 R=12.00 F=0.71 cov=99.63 hit=1 (3.5s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.81
+Average number of steps (last 100 episodes): 126.81
+Learning policy and Time taken to learn policy =  3.69
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 19, 22, 28, 31, 34, 31, 27, 32, 26, 24, 16, 14, 14, 6]
+unique states_visited =  {32, 34, 6, 10, 14, 16, 19, 22, 24, 26, 27, 28, 31}  and size  =  13
+Applying Actions of Learned policy =  [np.int64(3), np.int64(3), np.int64(3), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(3), np.int64(0), np.int64(2), np.int64(0), np.int64(0), np.int64(0), np.int64(2), np.int64(1)]  Time taken to extract policy =  1783496132.13
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 19, 22, 28, 31, 34, 31, 27, 32, 26, 24, 16, 14, 14, 6, 13]
+Apply policy unique states_visited =  {32, 34, 6, 10, 13, 14, 16, 19, 22, 24, 26, 27, 28, 31}  and size  =  14
+Time taken to apply policy =  3.69
+ intersectP =  {11, 140, 144, 146, 147, 154, 28, 418, 428, 431, 176, 433, 435, 181, 438, 59, 61, 190, 192, 65, 198, 76, 82, 212, 90, 91, 100, 102, 103}
+[MovieLens] user 7 (29/40): P=1.30 R=58.00 F=2.54 cov=98.70 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 84 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 128 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 127 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 59 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 140 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.88
+Average number of steps (last 100 episodes): 124.88
+Learning policy and Time taken to learn policy =  3.83
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 9, 9, 9, 11, 8, 3, 2, 3, 2, 0, 0, 2, 3]
+unique states_visited =  {0, 2, 3, 8, 9, 10, 11}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(0), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(0), np.int64(0), np.int64(0), np.int64(1), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783496135.82
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 9, 9, 9, 11, 8, 3, 2, 3, 2, 0, 0, 2, 3, 9]
+Apply policy unique states_visited =  {0, 2, 3, 8, 9, 10, 11}  and size  =  7
+Time taken to apply policy =  3.84
+ intersectP =  {201, 3403, 701, 1494}
+[MovieLens] user 164 (30/40): P=0.24 R=8.00 F=0.46 cov=99.76 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 106 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 108 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 113 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 126 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.54
+Average number of steps (last 100 episodes): 123.54
+Learning policy and Time taken to learn policy =  3.75
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 20, 20, 20, 20, 10, 19, 22, 29, 22, 18, 11, 9, 3, 9]
+unique states_visited =  {3, 9, 10, 11, 18, 19, 20, 22, 29}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(0), np.int64(0), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783496139.66
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 20, 20, 20, 20, 10, 19, 22, 29, 22, 18, 11, 9, 3, 9, 10]
+Apply policy unique states_visited =  {3, 9, 10, 11, 18, 19, 20, 22, 29}  and size  =  9
+Time taken to apply policy =  3.76
+ intersectP =  {1021, 4082, 1107, 1145, 189}
+[MovieLens] user 349 (31/40): P=0.27 R=21.74 F=0.54 cov=99.73 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 115 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 129 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 102 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.09
+Average number of steps (last 100 episodes): 123.09
+Learning policy and Time taken to learn policy =  3.64
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 9, 10, 20, 20, 20, 20, 10, 9, 9, 9, 3, 9, 10]
+unique states_visited =  {9, 10, 3, 20}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(2), np.int64(0), np.int64(0), np.int64(2), np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783496143.42
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 9, 10, 20, 20, 20, 20, 10, 9, 9, 9, 3, 9, 10, 19]
+Apply policy unique states_visited =  {3, 9, 10, 19, 20}  and size  =  5
+Time taken to apply policy =  3.64
+ intersectP =  {442, 4482, 1036, 645}
+[MovieLens] user 160 (32/40): P=0.38 R=8.00 F=0.72 cov=99.62 hit=1 (3.6s)
+StartState in env.GridPos=  8
+StartState in Actual Grid=  13
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  13
+Episode: 0 Return: 0.0 Steps Taken: 87 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 80 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 114 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.72
+Average number of steps (last 100 episodes): 123.72
+Learning policy and Time taken to learn policy =  3.65
+StartState in Actual Grid=  13
+state in GridPos =  8  Q =  [0. 0. 0. 0.]
+states_visited =  [8, 11, 19, 11, 19, 21, 20, 20, 20, 20, 20, 10, 10, 9, 10]
+unique states_visited =  {8, 9, 10, 11, 19, 20, 21}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(1), np.int64(2), np.int64(2), np.int64(1), np.int64(2), np.int64(2), np.int64(0), np.int64(2), np.int64(0), np.int64(1), np.int64(2)]  Time taken to extract policy =  1783496147.07
+StartState in Actual Grid=  13
+Apply policy states_visited =  [8, 11, 19, 11, 19, 21, 20, 20, 20, 20, 20, 10, 10, 9, 10, 10]
+Apply policy unique states_visited =  {8, 9, 10, 11, 19, 20, 21}  and size  =  7
+Time taken to apply policy =  3.65
+ intersectP =  {673, 2530, 676, 2252, 880, 702}
+[MovieLens] user 221 (33/40): P=0.45 R=30.00 F=0.88 cov=99.55 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 59 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 126 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 112 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.29
+Average number of steps (last 100 episodes): 127.29
+Learning policy and Time taken to learn policy =  3.69
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 10, 10, 10, 9, 11, 9, 11, 8, 3, 2, 2, 4, 7]
+unique states_visited =  {2, 3, 4, 7, 8, 9, 10, 11}  and size  =  8
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(2), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(2), np.int64(0), np.int64(2), np.int64(3), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496150.73
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 10, 10, 10, 9, 11, 9, 11, 8, 3, 2, 2, 4, 7, 13]
+Apply policy unique states_visited =  {2, 3, 4, 7, 8, 9, 10, 11, 13}  and size  =  9
+Time taken to apply policy =  3.69
+ intersectP =  {3139, 390, 1094, 395, 1168, 1328, 373, 445, 286, 799}
+[MovieLens] user 345 (34/40): P=0.41 R=20.00 F=0.80 cov=99.59 hit=1 (3.7s)
+StartState in env.GridPos=  25
+StartState in Actual Grid=  11
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  11
+Episode: 0 Return: 0.0 Steps Taken: 22 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 86 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 111 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 109 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 121.32
+Average number of steps (last 100 episodes): 121.32
+Learning policy and Time taken to learn policy =  3.66
+StartState in Actual Grid=  11
+state in GridPos =  25  Q =  [0. 0. 0. 0.]
+states_visited =  [25, 15, 25, 16, 24, 27, 24, 17, 24, 17, 12, 18, 23, 17, 24]
+unique states_visited =  {12, 15, 16, 17, 18, 23, 24, 25, 27}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(0), np.int64(2), np.int64(3), np.int64(2), np.int64(2), np.int64(1), np.int64(3), np.int64(0), np.int64(3), np.int64(3)]  Time taken to extract policy =  1783496154.43
+StartState in Actual Grid=  11
+Apply policy states_visited =  [25, 15, 25, 16, 24, 27, 24, 17, 24, 17, 12, 18, 23, 17, 24, 26]
+Apply policy unique states_visited =  {12, 15, 16, 17, 18, 23, 24, 25, 26, 27}  and size  =  10
+Time taken to apply policy =  3.66
+ intersectP =  {331, 4300, 123, 911, 144, 279, 4313, 923}
+[MovieLens] user 95 (35/40): P=0.29 R=16.00 F=0.57 cov=99.71 hit=1 (3.7s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 141 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 141 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 95 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 113 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 123.02
+Average number of steps (last 100 episodes): 123.02
+Learning policy and Time taken to learn policy =  3.78
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 10, 20, 10, 20, 20, 20, 20, 20, 10, 20, 20, 21, 20]
+unique states_visited =  {9, 10, 20, 21}  and size  =  4
+Applying Actions of Learned policy =  [np.int64(0), np.int64(1), np.int64(1), np.int64(0), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(2), np.int64(0), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(0)]  Time taken to extract policy =  1783496158.1
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 10, 20, 10, 20, 20, 20, 20, 20, 10, 20, 20, 21, 20, 10]
+Apply policy unique states_visited =  {9, 10, 20, 21}  and size  =  4
+Time taken to apply policy =  3.78
+ intersectP =  {34, 805, 389, 554, 2522, 764}
+[MovieLens] user 390 (36/40): P=0.57 R=12.00 F=1.09 cov=99.43 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 61 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 66 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 132 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 125 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 113 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 127.51
+Average number of steps (last 100 episodes): 127.51
+Learning policy and Time taken to learn policy =  3.75
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 9, 3, 3, 9, 9, 10, 9, 3, 8, 12, 18, 11, 19, 21]
+unique states_visited =  {3, 8, 9, 10, 11, 12, 18, 19, 21}  and size  =  9
+Applying Actions of Learned policy =  [np.int64(0), np.int64(0), np.int64(2), np.int64(1), np.int64(2), np.int64(1), np.int64(0), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(2), np.int64(1), np.int64(1), np.int64(3)]  Time taken to extract policy =  1783496161.88
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 9, 3, 3, 9, 9, 10, 9, 3, 8, 12, 18, 11, 19, 21, 29]
+Apply policy unique states_visited =  {3, 8, 9, 10, 11, 12, 18, 19, 21, 29}  and size  =  10
+Time taken to apply policy =  3.76
+ intersectP =  {2953, 142, 659, 3124, 726, 26}
+[MovieLens] user 100 (37/40): P=0.19 R=24.00 F=0.38 cov=99.81 hit=1 (3.8s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 124.43
+Average number of steps (last 100 episodes): 124.43
+Learning policy and Time taken to learn policy =  3.58
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 10, 19, 21, 29, 29, 21, 19, 22, 19, 21, 19, 11, 19]
+unique states_visited =  {10, 11, 19, 21, 22, 29}  and size  =  6
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(2), np.int64(0), np.int64(3), np.int64(2), np.int64(1), np.int64(0), np.int64(0), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783496165.64
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 10, 19, 21, 29, 29, 21, 19, 22, 19, 21, 19, 11, 19, 21]
+Apply policy unique states_visited =  {10, 11, 19, 21, 22, 29}  and size  =  6
+Time taken to apply policy =  3.59
+ intersectP =  {1034, 739}
+[MovieLens] user 368 (38/40): P=0.15 R=9.52 F=0.29 cov=99.85 hit=1 (3.6s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 43 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 88 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 142 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 100 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 120.48
+Average number of steps (last 100 episodes): 120.48
+Learning policy and Time taken to learn policy =  3.46
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 10, 10, 10, 10, 19, 21, 19, 22, 28, 30, 34, 34, 34]
+unique states_visited =  {34, 10, 19, 21, 22, 28, 30}  and size  =  7
+Applying Actions of Learned policy =  [np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(2), np.int64(3), np.int64(1), np.int64(0), np.int64(3), np.int64(3), np.int64(1), np.int64(3), np.int64(1), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783496169.23
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 10, 10, 10, 10, 19, 21, 19, 22, 28, 30, 34, 34, 34, 34]
+Apply policy unique states_visited =  {34, 10, 19, 21, 22, 28, 30}  and size  =  7
+Time taken to apply policy =  3.47
+ intersectP =  {2509, 301, 2670, 432, 406, 184, 1241, 478}
+[MovieLens] user 353 (39/40): P=0.43 R=16.00 F=0.85 cov=99.57 hit=1 (3.5s)
+StartState in env.GridPos=  10
+StartState in Actual Grid=  24
+Reset applied Successfully 
+Learnning policy 
+StartState in Actual Grid=  24
+Episode: 0 Return: 0.0 Steps Taken: 144 Episode#  0 Ends
+Episode: 20 Return: 0.0 Steps Taken: 144 Episode#  20 Ends
+Episode: 40 Return: 0.0 Steps Taken: 144 Episode#  40 Ends
+Episode: 60 Return: 0.0 Steps Taken: 144 Episode#  60 Ends
+Episode: 80 Return: 0.0 Steps Taken: 144 Episode#  80 Ends
+Percent of episodes finished successfully: 0.0
+Percent of episodes finished successfully (last 100 episodes): 0.0
+Average number of steps: 126.91
+Average number of steps (last 100 episodes): 126.91
+Learning policy and Time taken to learn policy =  3.74
+StartState in Actual Grid=  24
+state in GridPos =  10  Q =  [0. 0. 0. 0.]
+states_visited =  [10, 10, 9, 9, 10, 20, 20, 21, 20, 21, 19, 21, 21, 20, 20]
+unique states_visited =  {9, 10, 19, 20, 21}  and size  =  5
+Applying Actions of Learned policy =  [np.int64(2), np.int64(0), np.int64(2), np.int64(1), np.int64(1), np.int64(1), np.int64(3), np.int64(2), np.int64(3), np.int64(0), np.int64(1), np.int64(1), np.int64(2), np.int64(1), np.int64(1)]  Time taken to extract policy =  1783496172.7
+StartState in Actual Grid=  24
+Apply policy states_visited =  [10, 10, 9, 9, 10, 20, 20, 21, 20, 21, 19, 21, 21, 20, 20, 20]
+Apply policy unique states_visited =  {9, 10, 19, 20, 21}  and size  =  5
+Time taken to apply policy =  3.74
+ intersectP =  {32, 34, 2530, 676, 2252, 2237}
+[MovieLens] user 619 (40/40): P=0.51 R=13.95 F=0.99 cov=99.49 hit=1 (3.7s)
+
+=== SUMMARY ===
+  dataset  n_sampled  n_evaluated  n_infeasible  precision_mean  precision_std  recall_mean  recall_std  f_measure_mean  coverage_mean  return_mean  hit_ratio
+   Amazon         40           40             0        0.132442       0.203208    45.000000   50.383147        0.263736      99.867558          0.0       0.45
+MovieLens         40           40             0        0.441011       0.279820    20.210519   12.927237        0.859695      99.558989          0.0       1.00

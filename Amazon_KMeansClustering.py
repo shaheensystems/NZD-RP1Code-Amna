@@ -5,9 +5,10 @@ import matplotlib.pyplot as plt
 #import seaborn as sns
 from sklearn.preprocessing import LabelEncoder
 from sklearn.cluster import KMeans
+import FeatureEngineering as FE
 #Amazon dataset contains 1191 users and 1348 distinct product ids
 def KMeans_Clusters(filepath):
-    data = pd.read_csv(filepath,header=0)
+    data = pd.read_csv(filepath, header=0, names=['User No.', 'Product ID code', 'Rating'])
     df = pd.DataFrame(data)
 
     df_cluster = df[['User No.', 'Product ID code']].copy()
@@ -19,29 +20,26 @@ def KMeans_Clusters(filepath):
         if isinstance(val, str):
             return val.replace(" ", ",")
         return str(val)
-    #Why we need user_id_encode
-    df_cluster['user_id_encoded'] = label_encoder_user.fit_transform(df_cluster['User No.'].astype(str))
-    #print(" df_cluster['user_id_encoded']  =",df_cluster['user_id_encoded'] )
-    #print(" df_cluster['User No.'] = ",df_cluster['User No.'])
-    X_users = df_cluster[['user_id_encoded']]
-    #print(" X_users = ",X_users)
-    #X_users_Mubb =df_cluster['User No.']
-    #print("X_users_Mubb = ",X_users_Mubb)
+    #Behavioral features: cluster on rating statistics (mean/count/std) per user and
+    #per product instead of the arbitrary label-encoded ID, so clusters reflect
+    #interaction behavior rather than ID order.
+    X_users, user_ids, X_products, product_ids = FE.amazon_features(df, rating_col='Rating')
+
     df['comma_separated_User_No.'] = df['User No.'].apply(space_to_comma)
-    #print(" df['comma_separated_User_No.'] = ",df['comma_separated_User_No.'])
-    df_cluster['product_id_encoded'] = label_encoder_product.fit_transform(df_cluster['Product ID code'].astype(str))
     df['comma_separated_Product_ID_code'] = df['Product ID code'].apply(space_to_comma)
-    X_products = df_cluster[['product_id_encoded']]
-    #what is 'user_cluster_36'
-    kmeans_36_users = KMeans(n_clusters=36, random_state=42)
-    #print("kmeans_36_users = ",kmeans_36_users)
-    df_cluster['user_cluster_36'] = kmeans_36_users.fit_predict(X_users)
-    #print(" df_cluster['user_cluster_36'] = ",df_cluster['user_cluster_36'])
 
-    kmeans_36_products = KMeans(n_clusters=36, random_state=42)
-    df_cluster['product_cluster_36'] = kmeans_36_products.fit_predict(X_products)
+    kmeans_36_users = KMeans(n_clusters=36, random_state=42, n_init=10)
+    user_labels = kmeans_36_users.fit_predict(X_users)
+    user_cluster_map = dict(zip(user_ids, user_labels))
+    df_cluster['user_cluster_36'] = df_cluster['User No.'].map(user_cluster_map)
 
-    #print(df_cluster[['User No.', 'user_id_encoded', 'user_cluster_36']].head(1462))
+    kmeans_36_products = KMeans(n_clusters=36, random_state=42, n_init=10)
+    product_labels = kmeans_36_products.fit_predict(X_products)
+    product_cluster_map = dict(zip(product_ids, product_labels))
+    df_cluster['product_cluster_36'] = df_cluster['Product ID code'].map(product_cluster_map)
+    df['product_cluster_36'] = df['Product ID code'].map(product_cluster_map)
+
+    #print(df_cluster[['User No.', 'user_cluster_36']].head(1462))
 
     #print(df[['comma_separated_User_No.', 'comma_separated_Product_ID_code']].head(1462))
 

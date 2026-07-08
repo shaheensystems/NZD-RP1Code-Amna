@@ -543,7 +543,7 @@ precisioni =[];recalli =[];Fmeasurei=[];coveragei=[];Return=[]
 
 
 def run (users,ratings) :
-    filepath = "F:\\Thesis Supervised\\Year 2023\\NZD\\Python NZD1\\Amna Obaid\\amazon cleaned updated amna.csv";#Amazon dataset
+    filepath = "amazon test set.csv";#Amazon dataset (User No., Product ID code, Rating)
     #filepath = "F:/Thesis Supervised/Year 2023/NZD/Python NZD1/Amna RL/movielens1.csv";#ML100K dataset
     Dict2,Dict = Amazon_KMeansClustering.KMeans_Clusters(filepath)# For Amazon
     #Dict2, Dict = ML100K_KMeansClustering.KMeans_Clusters(filepath)  # For ML100K
