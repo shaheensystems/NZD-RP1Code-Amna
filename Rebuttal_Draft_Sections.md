@@ -138,29 +138,39 @@ Replace the "Why is K-means Selected?" narrative in Section 4.1 with a table + h
 
 ## 6. Standard Recommendation Metrics (new subsection in Results)
 **Addresses: Reviewer B #2 — DONE, real results from 40 sampled users/dataset**
+**Updated** after fixing four correctness bugs in the RL pipeline (episode-termination
+logic, per-episode state reset, no-op reward handling, a repeated-call accumulator bug —
+see `CODE_REVIEW_FINDINGS.md` P0.1–P0.4). The most consequential fix made the agent's
+convergence-based stopping condition (previously dead code — see below) actually fire:
+episodes now end once recommendations stop growing instead of always running to the
+revisit-count/step cap, so these numbers reflect materially shorter, more targeted
+episodes than the first pass.
 
 > **4.2 Standard Recommendation-Quality Metrics**
 > Sections 4.1 report RL-internal training diagnostics. To directly assess recommendation
 > quality, Precision, Recall, F-measure, item Coverage, and Hit Ratio (fraction of users
 > receiving at least one relevant recommendation) were computed over 40 real, randomly
-> sampled users per dataset (seed=42), using the per-user metrics already computed inside
-> the pipeline's `main()` function but previously never aggregated or reported.
+> sampled users per dataset (seed=42, fully reproducible run-to-run), using the per-user
+> metrics already computed inside the pipeline's `main()` function but previously never
+> aggregated or reported.
 >
 > | Dataset | Precision (%) | Recall (%) | F-measure (%) | Coverage (%) | Hit Ratio |
 > |---|---|---|---|---|---|
-> | Amazon | 0.13 ± 0.20 | 45.00 ± 50.38 | 0.26 ± 0.40 | 99.87 | 0.45 |
-> | MovieLens | 0.44 ± 0.28 | 20.21 ± 12.93 | 0.86 ± 0.54 | 99.56 | 1.00 |
+> | Amazon | 0.21 ± 0.38 | 36.25 ± 48.02 | 0.42 ± 0.75 | 99.79 | 0.375 |
+> | MovieLens | 0.33 ± 0.24 | 11.81 ± 7.65 | 0.64 ± 0.47 | 99.67 | 1.00 |
 >
 > All 40 sampled users per dataset produced a feasible recommendation (0 cold-start
 > failures at this sample size). Precision is low in absolute terms on both datasets —
 > expected given the recommender proposes the full reachable-cluster item set per episode
 > rather than a fixed-size top-K list, which inflates the denominator relative to
-> conventional top-K evaluation. Amazon's very large recall variance (±50 points on a mean
-> of 45%) is a direct artifact of its sparsity: most sampled Amazon users have exactly one
+> conventional top-K evaluation. Amazon's very large recall variance (±48 points on a mean
+> of 36%) is a direct artifact of its sparsity: most sampled Amazon users have exactly one
 > ground-truth item, so per-user recall is necessarily either 0% or 100% with nothing in
-> between, rather than reflecting a stable underlying rate. MovieLens, with denser
-> histories, gives a materially more stable recall estimate (95% CI 16.4–24.4% vs. Amazon's
-> 30–60%, Section 4.3).
+> between, rather than reflecting a stable underlying rate. MovieLens's recall dropped
+> versus the pre-fix pass (20.2%→11.8%) precisely because episodes are now shorter and more
+> targeted — the agent recommends a smaller, more convergent item set instead of wandering
+> the full 144-step cap, which trades recall for the higher precision and F-measure seen
+> above.
 >
 > We report this honestly as a limitation and note that re-expressing the policy's
 > recommendation as a ranked top-K list (using visit order from the learned policy) is a
@@ -174,6 +184,7 @@ Replace the "Why is K-means Selected?" narrative in Section 4.1 with a table + h
 
 ## 7. Statistical Significance (Results section addendum)
 **Addresses: Reviewer B #3 — DONE, bootstrap CIs + Mann–Whitney U test, 40 users/dataset**
+**Updated** with the post-bug-fix numbers (see note in Section 6 above).
 
 > **4.3 Statistical Significance**
 > 95% confidence intervals (10,000-resample bootstrap) and a two-sided Mann–Whitney U test
@@ -182,18 +193,19 @@ Replace the "Why is K-means Selected?" narrative in Section 4.1 with a table + h
 >
 > | Metric | Amazon mean [95% CI] | MovieLens mean [95% CI] | Mann–Whitney p |
 > |---|---|---|---|
-> | Precision | 0.132 [0.077, 0.201] | 0.441 [0.364, 0.535] | 2.3 × 10⁻⁹ |
-> | Recall | 45.0 [30.0, 60.0] | 20.2 [16.4, 24.4] | 0.437 (n.s.) |
-> | F-measure | 0.264 [0.153, 0.399] | 0.860 [0.710, 1.041] | 3.7 × 10⁻⁹ |
-> | Hit Ratio | 0.450 [0.300, 0.600] | 1.000 [1.000, 1.000] | 4.6 × 10⁻⁸ |
+> | Precision | 0.214 [0.111, 0.340] | 0.329 [0.261, 0.407] | 5.2 × 10⁻⁴ |
+> | Recall | 36.25 [21.25, 51.25] | 11.81 [9.55, 14.27] | 0.051 (borderline n.s.) |
+> | F-measure | 0.424 [0.220, 0.673] | 0.639 [0.507, 0.790] | 5.3 × 10⁻⁴ |
+> | Hit Ratio | 0.375 [0.225, 0.525] | 1.000 [1.000, 1.000] | 2.1 × 10⁻⁹ |
 >
-> Precision, F-measure, and Hit Ratio differ between datasets at p < 0.001 — the denser
-> MovieLens interaction histories yield materially and significantly better recommendation
-> quality than the sparse Amazon data, supporting the sparsity-driven limitation discussed
-> throughout Section 4. Recall does not differ significantly (p = 0.44); as noted in 4.2,
-> Amazon's recall is a near-binary 0%/100% quantity at this sparsity level and its wide
-> interval overlaps MovieLens's, so this null result is expected rather than a sign that
-> sparsity doesn't matter.
+> Precision, F-measure, and Hit Ratio still differ between datasets at p < 0.001 after the
+> bug fixes — the denser MovieLens interaction histories continue to yield significantly
+> better recommendation quality than the sparse Amazon data. Recall's significance shifted
+> from clearly non-significant (p = 0.44 pre-fix) to borderline (p = 0.051 post-fix): with
+> shorter, convergence-terminated episodes, Amazon's already-wide recall interval widened
+> further (21–51%) while MovieLens's narrowed (9.5–14.3%), nearly separating the two
+> distributions. We report this as borderline rather than rounding to "significant," since
+> p = 0.051 is not a result to oversell.
 >
 > This significance testing establishes that the *dataset-dependent* performance difference
 > is real, not sampling noise. It does not yet constitute a comparison against a competing

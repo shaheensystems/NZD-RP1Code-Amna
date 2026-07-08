@@ -80,6 +80,7 @@ class TwoDGridWorld(gym.Env):
         self.agent_position =self.StartState#Agent start state
         # respective actions of agents : up, down, left and right
         self.action_space = spaces.Discrete(4)
+        self.action_space.seed(42)  # reproducible exploration -- matches KMeans(random_state=42) convention used elsewhere
 
         self.observation_space = spaces.Box(low=0, high=size * size, shape=(1,), dtype=np.uint8)
 
@@ -203,6 +204,7 @@ def learnPolicy(env,u1I,u1R) :
         reward = 0
         sscount = 0;
         env.subsetcount = 0;
+        strt = 0;  # reset per-episode so Recitems starts fresh each episode instead of carrying over
 
         step = 0
 
@@ -259,6 +261,8 @@ def learnPolicy(env,u1I,u1R) :
                 #reward = StartState2.computeRLRS1Reward(env.GridPos[R][C], env.GridPos[np.ndarray.item(row)][np.ndarray.item(col)],env.Dictobj)
                 Return += reward;
                 #print("Reward: {:.2f}".format(reward))
+            else:
+                reward = 0  # no-op boundary action (wall bump): no transition happened, so no reward
 
             strt += 1;
             alpha=0.5; #Qlearning
@@ -382,6 +386,8 @@ def extractPolicy(Q,env,u1I,u1R) :
             #reward = StartState2.computeRLRS1Reward(prevState, np.ndarray.item(new_state), env.Dictobj)
             Return += reward;
             #print("Reward: {:.2f}".format(reward))
+        else:
+            reward = 0  # no-op boundary action (wall bump): no transition happened, so no reward
 
         strt += 1;
         #env.agent_position = env.ActualGrid[row][col]#NO NO Don't do this
@@ -420,6 +426,8 @@ def applyPolicy(winning_sequence,env,u1I,u1R) :
         #     #reward = StartState2.computeRLRS1Reward(env.GridPos[R][C], env.GridPos[np.ndarray.item(row)][np.ndarray.item(col)],env.Dictobj)
              Return += reward
         #     #print("Reward: {:.2f}".format(reward))
+        else:
+             reward = 0  # no-op boundary action (wall bump): no transition happened, so no reward
 
         strt += 1;
         env.render(env)
@@ -429,33 +437,6 @@ def applyPolicy(winning_sequence,env,u1I,u1R) :
     stateset=set(states_visited)
     print("Apply policy unique states_visited = ", stateset, " and size  = ", len(stateset))
     return env.Recitems, Return, state, list(stateset)
-
-actions = {
-        'Up': 0,
-        'Left': 1,
-        'Down': 2,
-        'Right': 3,
-
-}
-
-
-def computeCoverage(u1I,prediction) :
-    u1I = set(u1I)
-    prediction = set(prediction)
-    if (len(prediction) != 0):  # If there is some recommendation only then coverage can be computed
-        #diff = prediction.difference(u1I)#Previous code
-        diff = u1I.difference(prediction)
-        if (len(diff) > 0):
-            coverage = float(((len(u1I) - len(diff)) / len(u1I)) * 100)
-            #coverage = float((len(diff) / len(prediction)) * 100)#Previous code
-            # print("coverage = ",coverage, "%")
-        else:
-            coverage = 100;
-            print("Coverage = ", coverage, "%")
-    else:
-        coverage = 0
-        print("coverage = ", 0, "%")
-    return coverage
 
 def computeCoverage2(u1I,prediction) :
     u1I = set(u1I)
@@ -476,6 +457,7 @@ def computeCoverage2(u1I,prediction) :
         print("coverage = ", 0, "%")
     return coverage
 def main(u1I,u1R,Dict) :
+    torch.manual_seed(42)  # reproducible Q-learning exploration -- matches KMeans(random_state=42) convention used elsewhere
     Biclust = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,  25,  26, 27,28,  29,
                30, 31,  32, 33,  34, 35 ]  # , 39, 33, 35, 37]
 
@@ -541,10 +523,8 @@ ratings.append(u1R)
 ratings.append(u2R)
 #ratings.append(u3R)
 
-precisioni =[];recalli =[];Fmeasurei=[];coveragei=[];Return=[]
-
-
 def run (users,ratings) :
+    precisioni =[];recalli =[];Fmeasurei=[];coveragei=[];Return=[]  # local so repeated calls to run() don't accumulate stale results
     #filepath = "F:\\Thesis Supervised\\Year 2023\\NZD\\Python NZD1\\Amna Obaid\\amazon cleaned updated amna.csv";#Amazon dataset
     filepath = "Movielens100k.csv";#ML100K dataset
     #Dict2,Dict = Amazon_KMeansClustering.KMeans_Clusters(filepath)# For Amazon

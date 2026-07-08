@@ -1,5 +1,5 @@
 """
-Multi-user evaluation harness.
+Multi-user evaluation harness -- fast SAMPLE, not the full population.
 
 The original AmazonExp1.py / ML100KExp1.py `run()` only ever tested 2
 hardcoded synthetic users. Precision/Recall/F-measure were already computed
@@ -9,6 +9,21 @@ existing (unmodified) RL pipeline for each, and aggregates:
   Precision, Recall, F-measure, Item Coverage, Return, Hit Ratio,
   plus the fraction of users for whom no recommendation was feasible
   (cold-start / disconnected-cluster cases, main() returns state=-1).
+
+Relationship to Amazon_RLRecommender1.py / ML100K_RLRecommender1.py:
+those two scripts loop over EVERY user in the dataset (1191 Amazon / 671
+MovieLens) and reproduce the paper's original States-Visited / Return-Earned
+per-user figures -- they are the full-population, "ground truth" evaluation,
+now fixed to run headlessly and reproducibly (see requirements.txt / P1.6-1.7
+in CODE_REVIEW_FINDINGS.md), but slow (expect 60-100+ minutes combined for
+both datasets at ~3-5s/user). This script (MultiUserEval.py) instead samples
+N=40 users (seed=42) per dataset for a fast, still-reproducible run, and adds
+metrics the full-population scripts don't compute (Hit Ratio, bootstrap CIs,
+Mann-Whitney significance testing -- see MultiUserEval.py's own output and
+Rebuttal_Draft_Sections.md). Use the full-population scripts if you need the
+original per-user figures or a non-sampled headline number; use this script
+for fast iteration and the standard-metrics/significance-testing numbers
+quoted in the reviewer response.
 """
 import random
 import time

@@ -44,9 +44,11 @@ def load_Dataset(data, num_users, num_items):
     #print(BinaryMat)
     return users, items, scores, UIMat,user_index,item_index
 
-data, num_users, num_items,list_users,list_items = read_Dataset()
-# # print("number of users = ",len(list_users))
-# print("List of users = ",list_users)
-# # print("number of items = ",len(list_items))
-# print("List of items = ",list_items)
-users, items, scores, BinaryMat,user_index,item_index=load_Dataset(data, num_users, num_items)
+#Demo block below only runs when this file is executed directly, not on import
+#(previously ran unconditionally at import time). It also requires the full-featured
+#Amazon file (Category, Discounted price, Rating count, etc.) which isn't part of this
+#repo -- only 'amazon test set.csv' (User No., Product ID code, Rating) is available, so
+#read_Dataset()'s hardcoded path/schema below won't resolve here without that file.
+if __name__ == '__main__':
+    data, num_users, num_items, list_users, list_items = read_Dataset()
+    users, items, scores, BinaryMat, user_index, item_index = load_Dataset(data, num_users, num_items)
