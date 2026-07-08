@@ -246,6 +246,7 @@ def learnPolicy(env,u1I,u1R) :
             else:
                 env.Recitems, sscount = ML100K_StartState2.computeGoal(env.Recitems, env.GridPos[row][col],
                                                             env.Dictobj, env.subsetcount);
+            env.subsetcount = sscount  # feed convergence count back so step()'s done check (subsetcount==stopcount) is live
 
             if ((statecount == env.stopcount) or (step==144)):
                 done = True
@@ -366,7 +367,7 @@ def extractPolicy(Q,env,u1I,u1R) :
             env.Recitems, sscount = ML100K_StartState2.computeGoal(env.Recitems, env.GridPos[row][col],
                                                         env.Dictobj, env.subsetcount);
 
-        #env.subsetcount = sscount
+        env.subsetcount = sscount  # feed convergence count back so step()'s done check (subsetcount==stopcount) is live
         #print("Recommended items = ", env.Recitems, " sscount = ", sscount)
         if (statecount == env.stopcount or count == 15):
             print("states_visited = ", states_visited)
@@ -409,6 +410,7 @@ def applyPolicy(winning_sequence,env,u1I,u1R) :
         else:
             env.Recitems, sscount = ML100K_StartState2.computeGoal(env.Recitems, env.GridPos[row][col],
                                                                  env.Dictobj, env.subsetcount);
+        env.subsetcount = sscount  # feed convergence count back so step()'s done check (subsetcount==stopcount) is live
         if (((new_state)!=prevState)):# If both prevstate and new_state are same then no reward
 
              R = prevState // env.size
