@@ -70,13 +70,13 @@ def sample_movielens_users(n=N_USERS, seed=SEED, max_items=MAX_ITEMS_PER_USER):
     return samples
 
 
-def evaluate(dataset_name, main_fn, Dict, samples):
+def evaluate(dataset_name, main_fn, Dict, samples, stopcount=10):
     rows = []
     infeasible = 0
     for i, (uid, items, ratings) in enumerate(samples):
         t0 = time.time()
         try:
-            pred, cover, prec, recal, FM, ttime, ret, state, visited = main_fn(items, ratings, Dict)
+            pred, cover, prec, recal, FM, ttime, ret, state, visited = main_fn(items, ratings, Dict, stopcount)
         except Exception as e:
             print(f"[{dataset_name}] user {uid} raised {type(e).__name__}: {e} -- skipping")
             continue
@@ -112,6 +112,16 @@ def evaluate(dataset_name, main_fn, Dict, samples):
     return df, summary
 
 
+# Per-dataset stopcount, chosen via StopcountSweep.py on a disjoint tuning sample (seed=123)
+# and verified on this file's own seed=42 reporting sample before being finalized:
+#   Amazon=30    -- beats the pre-fix baseline on ALL FOUR metrics (P/R/F/Hit)
+#   MovieLens=15 -- best F-measure on the tuning sample; roughly at parity with the
+#                   pre-fix baseline on the reporting sample (precision/F close, recall/hit
+#                   modestly lower) -- see Rebuttal_Draft_Sections.md Section 6-7 for the
+#                   full before/after comparison, including where it did NOT improve.
+STOPCOUNT_AMAZON = 30
+STOPCOUNT_MOVIELENS = 15
+
 if __name__ == '__main__':
     all_summaries = []
 
@@ -120,7 +130,7 @@ if __name__ == '__main__':
     amazon_samples = sample_amazon_users()
     print(f"Sampled {len(amazon_samples)} Amazon users "
           f"(item counts: {[len(s[1]) for s in amazon_samples]})")
-    _, summary_a = evaluate('Amazon', AE.main, Dict_amazon, amazon_samples)
+    _, summary_a = evaluate('Amazon', AE.main, Dict_amazon, amazon_samples, stopcount=STOPCOUNT_AMAZON)
     all_summaries.append(summary_a)
 
     print("\n=== Clustering MovieLens (behavioral features) ===")
@@ -128,7 +138,7 @@ if __name__ == '__main__':
     ml_samples = sample_movielens_users()
     print(f"Sampled {len(ml_samples)} MovieLens users "
           f"(item counts: {[len(s[1]) for s in ml_samples]})")
-    _, summary_m = evaluate('MovieLens', ME.main, Dict_ml, ml_samples)
+    _, summary_m = evaluate('MovieLens', ME.main, Dict_ml, ml_samples, stopcount=STOPCOUNT_MOVIELENS)
     all_summaries.append(summary_m)
 
     summary_df = pd.DataFrame(all_summaries)

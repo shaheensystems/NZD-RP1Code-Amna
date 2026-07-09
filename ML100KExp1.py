@@ -35,7 +35,8 @@ class TwoDGridWorld(gym.Env):
     RIGHT = 3
 
 
-    def __init__(self, size,Biclust,u1I,Dict):
+    # stopcount=15 tuned via StopcountSweep.py on a disjoint sample; best F-measure for MovieLens
+    def __init__(self, size,Biclust,u1I,Dict,stopcount=15):
 
         self.Dictobj = Dict  # call to main method of ExtractMatrix8 to get obj1 object
         #print("Dictobj = ", self.Dictobj)
@@ -48,7 +49,7 @@ class TwoDGridWorld(gym.Env):
         self.Recitems=set()
         goal = False;  # if (subsetcount>=TH) then goal = true
         self.Recset=set()
-        self.stopcount=10;
+        self.stopcount=stopcount;
         #self.end_state = (size * size) - 1  # Actual Code
         self.end_state = 0  # Mubbashir added code to define goal state
 
@@ -456,12 +457,13 @@ def computeCoverage2(u1I,prediction) :
         coverage = 0
         print("coverage = ", 0, "%")
     return coverage
-def main(u1I,u1R,Dict) :
+# stopcount=15 tuned via StopcountSweep.py on a disjoint sample; best F-measure for MovieLens
+def main(u1I,u1R,Dict,stopcount=15) :
     torch.manual_seed(42)  # reproducible Q-learning exploration -- matches KMeans(random_state=42) convention used elsewhere
     Biclust = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,  25,  26, 27,28,  29,
                30, 31,  32, 33,  34, 35 ]  # , 39, 33, 35, 37]
 
-    env = TwoDGridWorld(6, Biclust,u1I,Dict)
+    env = TwoDGridWorld(6, Biclust,u1I,Dict,stopcount)
     # check_env(env, warn=True)
     #print("env = ", np.asarray(env.GridPos))
     if(env.majorBreak==-1):

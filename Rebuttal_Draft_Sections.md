@@ -138,13 +138,20 @@ Replace the "Why is K-means Selected?" narrative in Section 4.1 with a table + h
 
 ## 6. Standard Recommendation Metrics (new subsection in Results)
 **Addresses: Reviewer B #2 — DONE, real results from 40 sampled users/dataset**
-**Updated** after fixing four correctness bugs in the RL pipeline (episode-termination
-logic, per-episode state reset, no-op reward handling, a repeated-call accumulator bug —
-see `CODE_REVIEW_FINDINGS.md` P0.1–P0.4). The most consequential fix made the agent's
-convergence-based stopping condition (previously dead code — see below) actually fire:
-episodes now end once recommendations stop growing instead of always running to the
-revisit-count/step cap, so these numbers reflect materially shorter, more targeted
-episodes than the first pass.
+**Updated twice**: first after fixing four correctness bugs in the RL pipeline
+(episode-termination logic, per-episode state reset, no-op reward handling, a
+repeated-call accumulator bug — see `CODE_REVIEW_FINDINGS.md` P0.1–P0.4); then again
+after tuning the `stopcount` convergence threshold, which the first fix made live for the
+first time (previously dead code, always 0, so this threshold never actually fired). Full
+tuning methodology and honest before/after numbers below — including where tuning did
+**not** produce a win, reported as such rather than hidden.
+>
+> **Tuning methodology** (to avoid overfitting the reported numbers): `stopcount` values
+> {5,10,15,20,30,40,60,100} were swept on a *disjoint* tuning sample (seed=123, 15
+> users/dataset, distinct from the seed=42 sample used for all reported numbers). The
+> best-performing value per dataset (by F-measure) was selected *before* touching the
+> seed=42 sample, then verified once on it — Amazon=30, MovieLens=15. See
+> `StopcountSweep.py` and `stopcount_sweep_results.csv` for the full sweep.
 
 > **4.2 Standard Recommendation-Quality Metrics**
 > Sections 4.1 report RL-internal training diagnostics. To directly assess recommendation
@@ -156,21 +163,26 @@ episodes than the first pass.
 >
 > | Dataset | Precision (%) | Recall (%) | F-measure (%) | Coverage (%) | Hit Ratio |
 > |---|---|---|---|---|---|
-> | Amazon | 0.21 ± 0.38 | 36.25 ± 48.02 | 0.42 ± 0.75 | 99.79 | 0.375 |
-> | MovieLens | 0.33 ± 0.24 | 11.81 ± 7.65 | 0.64 ± 0.47 | 99.67 | 1.00 |
+> | Amazon (original code) | 0.13 ± 0.20 | 45.00 ± 50.38 | 0.26 ± 0.40 | 99.87 | 0.450 |
+> | Amazon (bug-fixed, stopcount=30) | **0.29 ± 0.41** | **52.08 ± 49.38** | **0.57 ± 0.80** | 99.71 | **0.550** |
+> | MovieLens (original code) | 0.44 ± 0.28 | 20.21 ± 12.93 | 0.86 ± 0.54 | 99.56 | 1.000 |
+> | MovieLens (bug-fixed, stopcount=15) | 0.44 ± 0.28 | 10.13 ± 7.32 | 0.83 ± 0.54 | 99.56 | 0.975 |
 >
-> All 40 sampled users per dataset produced a feasible recommendation (0 cold-start
-> failures at this sample size). Precision is low in absolute terms on both datasets —
-> expected given the recommender proposes the full reachable-cluster item set per episode
-> rather than a fixed-size top-K list, which inflates the denominator relative to
-> conventional top-K evaluation. Amazon's very large recall variance (±48 points on a mean
-> of 36%) is a direct artifact of its sparsity: most sampled Amazon users have exactly one
-> ground-truth item, so per-user recall is necessarily either 0% or 100% with nothing in
-> between, rather than reflecting a stable underlying rate. MovieLens's recall dropped
-> versus the pre-fix pass (20.2%→11.8%) precisely because episodes are now shorter and more
-> targeted — the agent recommends a smaller, more convergent item set instead of wandering
-> the full 144-step cap, which trades recall for the higher precision and F-measure seen
-> above.
+> **Amazon improves on all four metrics** after the bug fixes and tuning — Precision +117%,
+> Recall +16%, F-measure +115%, Hit Ratio +22%, all verified on the same held-out seed=42
+> sample the tuning phase never saw. **MovieLens is materially unchanged on Precision and
+> F-measure** (within noise of the original numbers) **but Recall and Hit Ratio are lower**
+> (20.2%→10.1% and 100%→97.5%) — the convergence-based early stopping that helps Amazon cuts
+> MovieLens episodes short before the agent accumulates as many relevant items. We tested
+> stopcount up to 100 for MovieLens (`stopcount_sweep_results.csv`) and recall never
+> recovered to the original level, so this is reported as a genuine trade-off introduced by
+> fixing the termination-condition bug, not a tuning shortfall.
+>
+> Precision is low in absolute terms on both datasets — expected given the recommender
+> proposes the full reachable-cluster item set per episode rather than a fixed-size top-K
+> list, which inflates the denominator relative to conventional top-K evaluation. Amazon's
+> large recall variance is a direct artifact of its sparsity: most sampled Amazon users have
+> exactly one ground-truth item, so per-user recall is necessarily either 0% or 100%.
 >
 > We report this honestly as a limitation and note that re-expressing the policy's
 > recommendation as a ranked top-K list (using visit order from the learned policy) is a
@@ -184,7 +196,8 @@ episodes than the first pass.
 
 ## 7. Statistical Significance (Results section addendum)
 **Addresses: Reviewer B #3 — DONE, bootstrap CIs + Mann–Whitney U test, 40 users/dataset**
-**Updated** with the post-bug-fix numbers (see note in Section 6 above).
+**Updated** with the final bug-fixed + tuned numbers (Amazon stopcount=30, MovieLens
+stopcount=15; see Section 6 for the full before/after and tuning methodology).
 
 > **4.3 Statistical Significance**
 > 95% confidence intervals (10,000-resample bootstrap) and a two-sided Mann–Whitney U test
@@ -193,19 +206,20 @@ episodes than the first pass.
 >
 > | Metric | Amazon mean [95% CI] | MovieLens mean [95% CI] | Mann–Whitney p |
 > |---|---|---|---|
-> | Precision | 0.214 [0.111, 0.340] | 0.329 [0.261, 0.407] | 5.2 × 10⁻⁴ |
-> | Recall | 36.25 [21.25, 51.25] | 11.81 [9.55, 14.27] | 0.051 (borderline n.s.) |
-> | F-measure | 0.424 [0.220, 0.673] | 0.639 [0.507, 0.790] | 5.3 × 10⁻⁴ |
-> | Hit Ratio | 0.375 [0.225, 0.525] | 1.000 [1.000, 1.000] | 2.1 × 10⁻⁹ |
+> | Precision | 0.287 [0.169, 0.417] | 0.435 [0.354, 0.524] | 5.2 × 10⁻⁴ |
+> | Recall | 52.08 [37.08, 67.08] | 10.13 [8.04, 12.51] | 0.393 (n.s.) |
+> | F-measure | 0.567 [0.335, 0.824] | 0.831 [0.677, 1.000] | 1.9 × 10⁻³ |
+> | Hit Ratio | 0.550 [0.400, 0.700] | 0.975 [0.925, 1.000] | 9.3 × 10⁻⁶ |
 >
-> Precision, F-measure, and Hit Ratio still differ between datasets at p < 0.001 after the
-> bug fixes — the denser MovieLens interaction histories continue to yield significantly
-> better recommendation quality than the sparse Amazon data. Recall's significance shifted
-> from clearly non-significant (p = 0.44 pre-fix) to borderline (p = 0.051 post-fix): with
-> shorter, convergence-terminated episodes, Amazon's already-wide recall interval widened
-> further (21–51%) while MovieLens's narrowed (9.5–14.3%), nearly separating the two
-> distributions. We report this as borderline rather than rounding to "significant," since
-> p = 0.051 is not a result to oversell.
+> Precision, F-measure, and Hit Ratio still differ between datasets at p < 0.01 after the
+> bug fixes and tuning — the denser MovieLens interaction histories continue to yield
+> significantly better recommendation quality than the sparse Amazon data. Recall does not
+> differ significantly (p = 0.393): Amazon's recall variance widened further under
+> stopcount=30 (37–67% CI) since it now recommends larger, more successful item sets for
+> the sparse-data users who do get a hit, overlapping MovieLens's narrower 8–13% band. This
+> non-significant result should not be read as "sparsity doesn't matter" — Precision,
+> F-measure, and Hit Ratio all disagree — but as recall specifically being a noisy,
+> near-binary quantity on Amazon's 1-item-per-user sparsity regime regardless of tuning.
 >
 > This significance testing establishes that the *dataset-dependent* performance difference
 > is real, not sampling noise. It does not yet constitute a comparison against a competing
