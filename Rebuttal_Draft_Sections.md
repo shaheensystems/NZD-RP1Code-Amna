@@ -158,7 +158,7 @@ Replace the "Why is K-means Selected?" narrative in Section 4.1 with a table + h
 ## 6. Standard Recommendation Metrics (new subsection in Results)
 **Addresses: Reviewer B #2 — DONE. Headline numbers are now the FULL population**
 **(all 1,191 Amazon users, all 671 MovieLens users)**, not a sample.
-**Updated four times**: (1) after fixing four correctness bugs in the RL pipeline
+**Updated five times**: (1) after fixing four correctness bugs in the RL pipeline
 (episode-termination logic, per-episode state reset, no-op reward handling, a
 repeated-call accumulator bug — see `CODE_REVIEW_FINDINGS.md` P0.1–P0.4); (2) after tuning
 the `stopcount` convergence threshold, which fix (1) made live for the first time
@@ -166,18 +166,32 @@ the `stopcount` convergence threshold, which fix (1) made live for the first tim
 the tuned configuration over the entire user population instead of a 40-user sample; (4)
 after fixing the reward function itself (Section 1 above / `REWARD_FUNCTION_MATH.md`) —
 the original item-Jaccard reward was structurally always zero, so the numbers below are the
-**first results in this project's history generated with a functioning reward signal.**
+**first results in this project's history generated with a functioning reward signal**; (5)
+after re-tuning `stopcount` under the now-real reward, since tuning (2) was done under the
+broken reward and was therefore stale.
 
 > **Tuning methodology** (to avoid overfitting the reported numbers): `stopcount` values
 > {5,10,15,20,30,40,60,100} were swept on a *disjoint* tuning sample (seed=123, 15
-> users/dataset). The best-performing value per dataset (by F-measure) was selected
-> *before* touching any reporting data — Amazon=30, MovieLens=15 — then verified on a
-> 40-user held-out sample (seed=42), and finally confirmed by running on the full
-> population below. See `StopcountSweep.py` / `stopcount_sweep_results.csv` for the sweep,
-> and `MultiUserEval.py` / `multiuser_eval_*.csv` for the 40-user check. Note: this tuning
-> was done *before* the reward-function fix (4), under the old always-zero reward, so it
-> only tuned episode length, not anything reward-dependent — re-tuning after the reward fix
-> is a natural next step, not yet done in this revision.
+> users/dataset), separately before and after the reward-function fix. Before the fix:
+> Amazon=30, MovieLens=15. After the fix: Amazon unchanged at 30; **MovieLens's optimum
+> shifted to 40** (F-measure 1.093 vs. 0.896 at 15, on the tuning sample). Each choice was
+> selected *before* touching any reporting data, then verified on a 40-user held-out sample
+> (seed=42), and finally confirmed by running on the full population below. See
+> `StopcountSweep.py` / `stopcount_sweep_results.csv` for the sweep, and `MultiUserEval.py`
+> / `multiuser_eval_*.csv` for the 40-user check.
+>
+> **Honest caveat on the re-tuning**: the MovieLens stopcount=40 pick looked like a clear
+> win on the 15-user tuning sample, but at full population (n=671) the difference from
+> stopcount=15 is **not statistically significant** on any recommendation-quality metric
+> (Precision p=0.47, Recall p=0.44, F-measure p=0.47, Hit Ratio p=0.86) — only `Return`
+> itself shifted significantly (7.845→7.943, p=8.9×10⁻¹⁷⁸), and by a small absolute amount.
+> We kept stopcount=40 as the final value, consistent with the pre-registered
+> tuning-sample-then-verify methodology used throughout this revision, rather than reverting
+> after seeing the full-population result — but readers should not expect the retuning to
+> have meaningfully changed MovieLens's recommendation quality, only its `Return` and episode
+> dynamics. This is the second time in this project that a small-sample tuning signal did not
+> fully transfer to the full population (see the reward-fix sample-vs-population note below)
+> — a pattern worth keeping in mind for any future tuning on this codebase.
 
 > **4.1a Reward-Function Fix: Before vs. After (full population)**
 > | Dataset | Metric | Old reward (item-Jaccard) | New reward (user-Jaccard) | Mann-Whitney p |
@@ -218,12 +232,15 @@ the original item-Jaccard reward was structurally always zero, so the numbers be
 > | Amazon — bug-fixed + tuned, item-Jaccard reward, full pop. (n=1,191) | 0.19 ± 0.34 | 40.33 ± 48.73 | 0.37 ± 0.65 | 99.81 | 0.412 |
 > | Amazon — **+ user-Jaccard reward fix, full population (n=1,191)** | **0.20 ± 0.24** | **55.72 ± 49.47** | **0.40 ± 0.48** | 99.80 | **0.562** |
 > | MovieLens — original code (40-sample) | 0.44 ± 0.28 | 20.21 ± 12.93 | 0.86 ± 0.54 | 99.56 | 1.000 |
-> | MovieLens — bug-fixed + tuned, item-Jaccard reward, full pop. (n=671) | 1.66 ± 2.80 | 11.07 ± 9.06 | 2.43 ± 3.17 | 98.34 | 0.960 |
-> | MovieLens — **+ user-Jaccard reward fix, full population (n=671)** | **1.42 ± 2.45** | **16.43 ± 8.82** | **2.26 ± 2.93** | 98.58 | **0.975** |
+> | MovieLens — bug-fixed + tuned (sc=15), item-Jaccard reward, full pop. (n=671) | 1.66 ± 2.80 | 11.07 ± 9.06 | 2.43 ± 3.17 | 98.34 | 0.960 |
+> | MovieLens — + user-Jaccard reward fix (sc=15), full pop. (n=671) | 1.42 ± 2.45 | 16.43 ± 8.82 | 2.26 ± 2.93 | 98.58 | 0.975 |
+> | MovieLens — **+ re-tuned stopcount=40, full population (n=671)** | **1.48 ± 2.62** | **16.44 ± 9.55** | **2.36 ± 3.22** | 98.52 | **0.976** |
 >
 > The bolded rows are the current final numbers, reflecting every fix in this revision
-> including the reward-function correction (Section 1 / `REWARD_FUNCTION_MATH.md`). See
-> Section 4.1a above for the significance testing of the reward fix specifically.
+> including the reward-function correction (Section 1 / `REWARD_FUNCTION_MATH.md`) and the
+> stopcount re-tuning above. See Section 4.1a for the reward-fix significance testing, and
+> the tuning-methodology note above for why the sc=15→40 change itself is *not*
+> statistically significant despite the point estimates moving slightly.
 > **Amazon** improves on precision, recall, F-measure, and hit ratio simultaneously —
 > all four metrics, all statistically significant. **MovieLens** trades a modest (borderline
 > significant) precision decrease for a large, highly significant recall gain; F-measure and
@@ -262,9 +279,9 @@ the original item-Jaccard reward was structurally always zero, so the numbers be
 
 ## 7. Statistical Significance (Results section addendum)
 **Addresses: Reviewer B #3 — DONE, bootstrap CIs + Mann–Whitney U test, full population**
-**Updated** with the reward-fixed full-population numbers (Amazon n=1,191, MovieLens
-n=671; Amazon stopcount=30, MovieLens stopcount=15 — see Section 6 for tuning methodology,
-Section 1 / `REWARD_FUNCTION_MATH.md` for the reward fix).
+**Updated** with the reward-fixed, re-tuned full-population numbers (Amazon n=1,191,
+MovieLens n=671; Amazon stopcount=30, MovieLens stopcount=40 — see Section 6 for tuning
+methodology, Section 1 / `REWARD_FUNCTION_MATH.md` for the reward fix).
 
 > **4.3 Statistical Significance**
 > 95% confidence intervals (10,000-resample bootstrap) and a two-sided Mann–Whitney U test
@@ -273,10 +290,10 @@ Section 1 / `REWARD_FUNCTION_MATH.md` for the reward fix).
 >
 > | Metric | Amazon mean [95% CI] | MovieLens mean [95% CI] | Mann–Whitney p |
 > |---|---|---|---|
-> | Precision | 0.202 [0.189, 0.216] | 1.419 [1.242, 1.611] | 3.2 × 10⁻¹¹⁶ |
-> | Recall | 55.72 [52.93, 58.50] | 16.43 [15.76, 17.09] | 6.0 × 10⁻⁷ |
-> | F-measure | 0.402 [0.376, 0.430] | 2.257 [2.043, 2.485] | 5.0 × 10⁻¹¹⁵ |
-> | Hit Ratio | 0.562 [0.534, 0.589] | 0.975 [0.961, 0.985] | 2.5 × 10⁻⁷⁹ |
+> | Precision | 0.202 [0.189, 0.216] | 1.481 [1.294, 1.685] | 1.8 × 10⁻¹²¹ |
+> | Recall | 55.72 [52.93, 58.50] | 16.44 [15.73, 17.17] | 7.0 × 10⁻⁷ |
+> | F-measure | 0.402 [0.376, 0.430] | 2.363 [2.131, 2.614] | 1.9 × 10⁻¹¹⁶ |
+> | Hit Ratio | 0.562 [0.534, 0.589] | 0.976 [0.964, 0.987] | 5.6 × 10⁻⁸⁰ |
 >
 > With the full population, **every metric differs between datasets at extreme
 > significance** (p ranging from 10⁻⁷ to 10⁻¹¹⁶) — including Recall, which was *not*

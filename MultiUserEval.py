@@ -113,14 +113,12 @@ def evaluate(dataset_name, main_fn, Dict, samples, stopcount=10):
 
 
 # Per-dataset stopcount, chosen via StopcountSweep.py on a disjoint tuning sample (seed=123)
-# and verified on this file's own seed=42 reporting sample before being finalized:
-#   Amazon=30    -- beats the pre-fix baseline on ALL FOUR metrics (P/R/F/Hit)
-#   MovieLens=15 -- best F-measure on the tuning sample; roughly at parity with the
-#                   pre-fix baseline on the reporting sample (precision/F close, recall/hit
-#                   modestly lower) -- see Rebuttal_Draft_Sections.md Section 6-7 for the
-#                   full before/after comparison, including where it did NOT improve.
+# and verified on this file's own seed=42 reporting sample before being finalized. Re-tuned
+# after the reward-function fix (REWARD_FUNCTION_MATH.md) made the old always-zero-reward
+# tuning stale -- MovieLens's optimum shifted from 15 to 40 once reward became real; Amazon's
+# stayed at 30. See Rebuttal_Draft_Sections.md Section 6-7 for the full before/after.
 STOPCOUNT_AMAZON = 30
-STOPCOUNT_MOVIELENS = 15
+STOPCOUNT_MOVIELENS = 40
 
 if __name__ == '__main__':
     all_summaries = []

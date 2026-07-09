@@ -35,8 +35,9 @@ class TwoDGridWorld(gym.Env):
     RIGHT = 3
 
 
-    # stopcount=15 tuned via StopcountSweep.py on a disjoint sample; best F-measure for MovieLens
-    def __init__(self, size,Biclust,u1I,Dict,stopcount=15):
+    # stopcount=40 re-tuned via StopcountSweep.py after the reward-function fix (was 15
+    # under the old always-zero reward, which is now stale); best F-measure for MovieLens
+    def __init__(self, size,Biclust,u1I,Dict,stopcount=40):
 
         self.Dictobj = Dict  # call to main method of ExtractMatrix8 to get obj1 object
         #print("Dictobj = ", self.Dictobj)
@@ -457,8 +458,9 @@ def computeCoverage2(u1I,prediction) :
         coverage = 0
         print("coverage = ", 0, "%")
     return coverage
-# stopcount=15 tuned via StopcountSweep.py on a disjoint sample; best F-measure for MovieLens
-def main(u1I,u1R,Dict,stopcount=15) :
+# stopcount=40 re-tuned via StopcountSweep.py after the reward-function fix (was 15
+# under the old always-zero reward, which is now stale); best F-measure for MovieLens
+def main(u1I,u1R,Dict,stopcount=40) :
     torch.manual_seed(42)  # reproducible Q-learning exploration -- matches KMeans(random_state=42) convention used elsewhere
     Biclust = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24,  25,  26, 27,28,  29,
                30, 31,  32, 33,  34, 35 ]  # , 39, 33, 35, 37]
