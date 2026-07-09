@@ -56,15 +56,20 @@ def computeJaccard(Dictobj,u1I,Biclust):
  #print("Cluster ",x," rowlist = ",rowlist,"columlist = ",columnlist)
     #print("Intersection = ",intersect)
 def computeMyReward(PrevState,NextState,Dictobj) :
-    rewardd=-1;
-    Items1 = set(Dictobj[PrevState].get('Cluster_UniqItems'));#Cluster_Items Cluster_UniqItems
-    Items2 = set(Dictobj[NextState].get('Cluster_UniqItems'))
-    unionset =Items1.union(Items2)
-    intersect = Items1.intersection(Items2)
-    ItemsJacSim = len(intersect) / len(unionset)
-    rewardd=ItemsJacSim
-
-    return rewardd
+    #Jaccard similarity between the USERS who touched each cluster, not the items.
+    #Item sets are disjoint by construction across K-Means clusters (every product belongs
+    #to exactly one cluster), so item-Jaccard is structurally always 0 for any transition
+    #between different clusters. User sets are not partitioned this way -- a single user's
+    #ratings span many item clusters -- so user-Jaccard gives a real, non-degenerate signal.
+    #See REWARD_FUNCTION_MATH.md for the full derivation and empirical validation.
+    Users1 = set(Dictobj[PrevState].get('Cluster_Users'))
+    Users2 = set(Dictobj[NextState].get('Cluster_Users'))
+    unionset = Users1.union(Users2)
+    if not unionset:
+        return 0.0
+    intersect = Users1.intersection(Users2)
+    UsersJacSim = len(intersect) / len(unionset)
+    return UsersJacSim
 
 ####################################33
 #Parameters State = a sate for which we will check whether it is a goal state

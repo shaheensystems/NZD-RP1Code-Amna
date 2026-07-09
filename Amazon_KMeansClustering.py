@@ -78,10 +78,16 @@ def KMeans_Clusters(filepath):
     sorted_clusters = sorted(df['product_cluster_36'].unique())
     for cluster in sorted_clusters:#This loop adds priduct cluster to Dictobj_Products
         products_in_cluster = df_cluster[df['product_cluster_36'] == cluster]['Product ID code'].unique()
+        #Users who rated any item in this product cluster -- used for the Jaccard-of-users
+        #reward (see StartState2.computeMyReward). Unlike item sets, which are disjoint by
+        #construction across clusters, user sets naturally overlap (one user's ratings span
+        #many item clusters), so this gives a non-degenerate reward signal.
+        users_touching_cluster = df[df['product_cluster_36'] == cluster]['User No.'].unique()
 
         Dictobj_Products[x] = {
             'Cluster_Number': x,
             'Cluster_Items': products_in_cluster,
+            'Cluster_Users': users_touching_cluster,
             'Number of Products': len(products_in_cluster)
         }
         x += 1

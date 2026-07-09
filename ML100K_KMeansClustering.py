@@ -77,6 +77,12 @@ def KMeans_Clusters(filepath):
             'Cluster_Items':products_in_cluster.tolist(),
             'Title':title_in_cluster.tolist(),
             'UserId':userId_in_cluster.tolist(),
+            #Deduped users who rated any item in this product cluster -- used for the
+            #Jaccard-of-users reward (see ML100K_StartState2.computeMyReward). Unlike item
+            #sets, which are disjoint by construction across clusters, user sets naturally
+            #overlap (one user's ratings span many item clusters), giving a non-degenerate
+            #reward signal instead of the always-zero item-Jaccard.
+            'Cluster_Users': set(userId_in_cluster.tolist()),
             'Ratings':ratings_in_cluster.tolist(),
             'Cluster_UniqItems': Uniqitems,
             'GreatItemsCount':GreatItemsCount,
