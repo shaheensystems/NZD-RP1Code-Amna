@@ -1,7 +1,7 @@
 from collections import Counter
 import matplotlib.pyplot as plt
 
-def count_items(lst):
+def count_items(lst, savepath=None):
     # Use Counter to count occurrences of each item in the list
     item_counts = Counter(lst)
 
@@ -17,11 +17,15 @@ def count_items(lst):
     #print("size of items=", len(items),"size of counts = ",len(counts))
     #plt.plot(torch.arange(len(items)), counts, color='green')
     #plt.plot(items, counts, color='green')
+    plt.figure()
     plt.title("Count of Times a State Selected as Start State")
     plt.xlabel("Start States")
     plt.ylabel("Number of Times Selected")
     plt.bar(items, counts, alpha=0.6, color='blue', width=5)
+    if savepath:
+        plt.savefig(savepath, dpi=150)
     plt.show()
+    plt.close()
     #print("S = ",S)
     return items,S
 #####################################################################3

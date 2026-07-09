@@ -1,0 +1,2 @@
+dataset,n_users,n_infeasible,coverage_mean,precision_mean,recall_mean,f_measure_mean,return_mean,user_coverage_pct
+MovieLens,671,0,98.34390981657948,1.6560901834206514,11.06899169939349,2.4279779118995184,0.0,100.0

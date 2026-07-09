@@ -42,7 +42,8 @@ def run_full_population():
     notPred = 0
     StartStates = []
     dicty = {}
-    for testUser in usersList:
+    per_user_rows = []
+    for i, testUser in enumerate(usersList):
         u1I, u1R = getItemsandRating(fit, testUser)
         predict, cover, prec, recal, FM, ret, states, states_visited = ML100KExp1.run2(u1I, u1R, testUser, Dictobj_Products)
         dicty[testUser] = {
@@ -58,8 +59,19 @@ def run_full_population():
         recalli.append(recal)
         Fmeasurei.append(FM)
         Reti.append(ret)
-        if len(predict) == 0:
+        feasible = len(predict) > 0
+        if not feasible:
             notPred += 1
+        per_user_rows.append({
+            'user': testUser, 'n_items': len(u1I), 'start_state': states,
+            'states_visited_count': len(states_visited), 'coverage': cover,
+            'precision': prec, 'recall': recal, 'f_measure': FM, 'return': ret,
+            'feasible': feasible,
+        })
+        if (i + 1) % 100 == 0 or (i + 1) == len(usersList):
+            print(f"[MovieLens full-population] {i + 1}/{len(usersList)} users done")
+
+    pd.DataFrame(per_user_rows).to_csv('fullpop_eval_MovieLens.csv', index=False)
 
     sumcover = sumprec = sumrecal = sumFM = sumRet = 0
     for i in range(0, len(usersList)):
@@ -77,8 +89,14 @@ def run_full_population():
     print(" RLRecommender Item coverage =", coverage, 'Precision: ', Precision, " Recall =", Recall, " Fmeasure =",
           Fmeasure, "Return =", Return, " userCoverage= ", userCoverage)
 
+    pd.DataFrame([{
+        'dataset': 'MovieLens', 'n_users': len(usersList), 'n_infeasible': notPred,
+        'coverage_mean': coverage, 'precision_mean': Precision, 'recall_mean': Recall,
+        'f_measure_mean': Fmeasure, 'return_mean': Return, 'user_coverage_pct': userCoverage,
+    }]).to_csv('fullpop_eval_summary_MovieLens.csv', index=False)
+
     print("unique states visited = ", set(StartStates), "and number of unique states = ", len(set(StartStates)))
-    Icount, S = Listcount.count_items(StartStates)
+    Icount, S = Listcount.count_items(StartStates, savepath='Figure_StartStateCounts_MovieLens.png')
     print("unique States with count = ", S)
 
     users_out = []

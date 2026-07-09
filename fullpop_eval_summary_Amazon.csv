@@ -1,0 +1,2 @@
+dataset,n_users,n_infeasible,coverage_mean,precision_mean,recall_mean,f_measure_mean,return_mean,user_coverage_pct
+Amazon,1191,0,99.81489889600168,0.18510110399844049,40.32955499580185,0.36605676427505435,0.0,100.0
